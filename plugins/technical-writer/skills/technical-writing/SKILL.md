@@ -21,6 +21,7 @@ Load this skill for any technical prose, then the matching document-type skill o
 | Recording a decision, an ADR, a decision log entry | `recording-decisions` |
 | A changelog entry, release notes, "what shipped" | `writing-changelogs` |
 | A runbook, setup guide, procedure, troubleshooting entry | `writing-runbooks` |
+| A tracker item: epic, story, task, bug report, spike, acceptance criteria | `writing-issues` |
 | Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
 
 ## What this skill does not do

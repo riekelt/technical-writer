@@ -11,6 +11,7 @@ One core skill holds the shared rules; five document-type skills build on it.
 | [recording-decisions](plugins/technical-writer/skills/recording-decisions/SKILL.md) | ADRs and decision log entries. |
 | [writing-changelogs](plugins/technical-writer/skills/writing-changelogs/SKILL.md) | Changelog entries and release notes. |
 | [writing-runbooks](plugins/technical-writer/skills/writing-runbooks/SKILL.md) | Runbooks, setup guides, troubleshooting, procedures. |
+| [writing-issues](plugins/technical-writer/skills/writing-issues/SKILL.md) | Tracker items: epics, stories, tasks, bug reports, spikes, acceptance criteria. |
 | [reviewing-technical-prose](plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md) | Reviewing or rewriting someone else's text; severity mapping; the delivery checklist. |
 
 ## Influences and prior art
