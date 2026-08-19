@@ -1,6 +1,6 @@
 {
   "name": "technical-writer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "House-style technical writing: a core style and truth skill plus per-document-type skills for design docs, decisions, changelogs, runbooks, and prose review",
   "author": {
     "name": "riekelt",

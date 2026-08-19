@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/riekelt/technical-writer/compare/v1.0.0...v1.0.1) (2026-08-19)
+
+
+### Bug Fixes
+
+* style and reference fixes across the readme and skills ([628054a](https://github.com/riekelt/technical-writer/commit/628054a4de1051256f9469292dd73f1870bb6c9f))
+
 # 1.0.0 (2026-08-19)
 
 
