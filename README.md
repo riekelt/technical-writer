@@ -1,5 +1,7 @@
 # Technical writer
 
+[![skills.sh](https://skills.sh/b/riekelt/technical-writer)](https://skills.sh/riekelt/technical-writer)
+
 Skills for writing technical documents in a strict house style: conclusion first, every claim traceable to a source, one fact in one home, and a banned-constructions list that catches machine text. Distilled from writing conventions used across my own repositories.
 
 One core skill holds the shared rules; six specialized skills build on it.
