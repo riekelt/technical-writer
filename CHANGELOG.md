@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/riekelt/technical-writer/compare/v1.1.0...v1.1.1) (2026-08-19)
+
+
+### Bug Fixes
+
+* reconcile technical writing skill rules ([c688286](https://github.com/riekelt/technical-writer/commit/c688286727891b1b005735daf3d1b0891ca6cf2c))
+
 # [1.1.0](https://github.com/riekelt/technical-writer/compare/v1.0.1...v1.1.0) (2026-08-19)
 
 
