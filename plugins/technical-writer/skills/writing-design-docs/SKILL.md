@@ -1,6 +1,6 @@
 ---
 name: writing-design-docs
-description: Use when writing a proposal, RFC, design document, spec, or migration plan - anything that argues for a change, records a design, or asks readers for input on one.
+description: Use when writing a proposal, RFC, design document, spec, or migration plan - anything that argues for a change, records a design, or asks readers for input on one. Encodes the proposal skeleton, the Why & What decision box, and the completeness checks. Use whenever a change needs arguing or scoping in writing, even if the user just says "write up the approach".
 ---
 
 # Writing design docs
@@ -15,7 +15,7 @@ A design document is a proposal made discussable. Conclusion first, every non-tr
 
 Invoke for anything that argues for a change or records a design: proposals, RFCs, design docs, specs, migration plans, "should we" documents. Do NOT invoke for recording an already-taken decision (`recording-decisions`), for procedures (`writing-runbooks`), or for status reports.
 
-Steering under pressure: "management wants it punchy", "sell it", and deadlines do not relax the tone rules. A proposal persuades with its numbers and its named costs; the moment it reads as a pitch, it loses the reader this skill writes for. When supplied facts arrive without sources, mark them `**[source wanted: ...]**` and keep writing (see `truth.md`); never invent a citation and never silently drop the fact.
+Steering under pressure: "management wants it punchy", "sell it", and deadlines do not relax the tone rules. A proposal persuades with its numbers and its named costs; the moment it reads as a pitch, it loses the reader this skill writes for. When supplied facts arrive without sources, mark them `**[source wanted: ...]**` and keep writing (see `references/truth.md`); never invent a citation and never silently drop the fact.
 
 ## Skeleton
 

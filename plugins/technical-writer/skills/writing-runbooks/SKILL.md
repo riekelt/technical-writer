@@ -1,6 +1,6 @@
 ---
 name: writing-runbooks
-description: Use when writing operational documentation - runbooks, setup guides, release procedures, troubleshooting entries, or any ordered procedure someone will execute under time pressure.
+description: Use when writing operational documentation - runbooks, setup guides, release procedures, troubleshooting entries, or any ordered procedure someone will execute under time pressure. Encodes the runbook skeleton, the risk legend, and the symptom-first troubleshooting format. Use whenever someone will execute the text, even if it is called a "guide" or "setup notes".
 ---
 
 # Writing runbooks

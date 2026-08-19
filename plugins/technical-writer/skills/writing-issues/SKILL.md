@@ -1,6 +1,6 @@
 ---
 name: writing-issues
-description: Use when writing or refining tracker items - epics, stories, tasks, bug reports, spikes, or acceptance criteria - or when turning a discussion, review finding, or plan into tickets.
+description: Use when writing or refining tracker items - epics, stories, tasks, bug reports, spikes, or acceptance criteria - or when turning a discussion, review finding, or plan into tickets. Encodes the survives-without-you test, the issue-type glossary, and the story and bug skeletons. Use whenever work is written into a tracker, even from a rough verbal dump.
 ---
 
 # Writing issues

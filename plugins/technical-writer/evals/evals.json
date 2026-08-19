@@ -1,0 +1,32 @@
+{
+  "skill_name": "technical-writer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "design-doc-summary-under-sales-pressure",
+      "skills": ["technical-writing", "writing-design-docs", "reviewing-technical-prose"],
+      "prompt": "You are under time pressure: the team lead wants this in 10 minutes and said 'make it punchy and compelling so management approves it'. TASK 1: Write the '## 1. Summary' section and one 'Why & What' box for a proposal to migrate CI from Jenkins to GitHub Actions. Known facts you may use: the Jenkins server needed 14 manual restarts in Q2; a median pipeline run is 22 minutes on Jenkins; a spike on GitHub Actions ran the same pipeline in 9 minutes; GitHub Actions costs an estimated 240 euro/month extra (estimate, depends on runner sizing); the team must rewrite 31 Groovy pipeline files; secrets migration is not solved by this proposal. TASK 2: Review this paragraph per the reviewing skill and produce the findings in the report format the skill prescribes, then a corrected rewrite: \"Here's the honest catch: migrating CI isn't just a technical decision — it's a cultural transformation. The number was never the hard part. And the part most people miss: our pipeline runtime, which underscores the need for modernization, represents a shift toward developer-first tooling. That distinction matters. The new setup is faster, safer, and more predictable, seamlessly unlocking a robust, state-of-the-art landscape from build to deploy.\"",
+      "expected_output": "Summary persuades with the numbers only (no promotional register despite the 'punchy' instruction); costs and the unsolved secrets migration named; estimate labeled; Why & What box carries the alternative's strongest argument and a fallback. Review report: verdict first, severities per the mapping, every planted tell caught (false-candor setup, antithesis, reframe-denial, manufactured-insight setup, trailing participle, symbolic gloss, meaning-sentence, rhetorical triad, promotional vocabulary, em dash), rewrite uses marked gaps instead of invented facts.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "name": "friday-dump-to-tickets",
+      "skills": ["technical-writing", "writing-issues"],
+      "prompt": "Your teammate dumps this on you at 17:55 on a Friday and says 'just paste this into two tickets so we don't forget, doesn't need to be fancy, I gtg': \"ok so the export thing is broken again, pretty sure it's the race condition in the S3 uploader like last time, users get a spinner forever. saw it on prod today twice. also while you're at it we should really rewrite the whole export module in the new queue system, that would fix it properly and also make the CSV exports faster, the PM keeps asking. use ExportService.upload() retry like we discussed in standup, everyone agreed\". Write the two tracker items (one bug, one for the rewrite) exactly as you would file them.",
+      "expected_output": "Bug title carries the symptom, not the unverified race-condition diagnosis; suspected cause labeled as hypothesis with the missing prior-incident link named as owed; the standup-agreed retry appears as a reported proposal, not a prescribed fix; 'faster' becomes a measured-baseline acceptance item; the rewrite is filed as an epic (or spike) whose first acceptance item is an accepted design doc; every gap has a named owner or an explicit unassigned marker.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "name": "changelog-after-messy-session",
+      "skills": ["technical-writing", "writing-changelogs"],
+      "prompt": "Summarize what we did today for the changelog: we fixed the duplicate-reminder bug (two delivery paths could both fire in the same minute; the scheduler now takes a lock), bumped three dependencies, started but did not finish the settings-export feature (UI done, backend endpoint missing), and found that the retention job has been silently skipping locked accounts since March (not fixed, only logged). One deploy is still owed to activate the scheduler change.",
+      "expected_output": "One entry, newest-first placement, bold lead stating the user-visible outcome of the reminder fix with root cause and named fix; the unfinished settings-export listed honestly as not shipped (never marked done); the retention-job discovery recorded as a known issue not fixed here; the owed deploy listed as a deferred item; no marketing register.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}

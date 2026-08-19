@@ -1,11 +1,11 @@
 ---
 name: reviewing-technical-prose
-description: Use when reviewing, rewriting, or editing someone else's technical text, when writing a review report on a document, or as the final check before delivering any document.
+description: Use when reviewing, rewriting, or editing someone else's technical text, when writing a review report on a document, or as the final check before delivering any document. Encodes the severity mapping, the findings format, the what-not-to-flag list, and the delivery checklist. Use before any document ships, even when it looks fine.
 ---
 
 # Reviewing technical prose
 
-**REQUIRED BACKGROUND:** the `technical-writing` skill, including `style.md` (banned constructions) and `truth.md` (claim rules).
+**REQUIRED BACKGROUND:** the `technical-writing` skill, including `references/style.md` (banned constructions) and `references/truth.md` (claim rules).
 
 ## Overview
 
@@ -68,7 +68,7 @@ Before any document goes out:
 
 - [ ] **Matched** to the existing documents in the same directory, and added to the `README.md` index if one exists
 - [ ] **No em dashes, en dashes, or ` -- `**; no changelog section or "last updated" field; no ticket keys, phases, or SHAs in prose
-- [ ] **No banned constructions** (style.md); check at least the summary and the closing paragraphs
+- [ ] **No banned constructions** (references/style.md); check at least the summary and the closing paragraphs
 - [ ] **Headings name the content**: no question forms, no "What X means", no heading repeated in its first sentence
 - [ ] **Conclusion first** at document, chapter, and paragraph level
 - [ ] **Procedures**: one action per sentence, with an actor

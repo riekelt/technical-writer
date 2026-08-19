@@ -1,6 +1,6 @@
 ---
 name: writing-changelogs
-description: Use when writing a changelog entry, release notes, or a "what shipped" summary after completing work.
+description: Use when writing a changelog entry, release notes, or a "what shipped" summary after completing work. Encodes the entry shape, the handover template, and the honesty conventions. Use after shipping meaningful work, even if the user just says "summarize what we did".
 ---
 
 # Writing changelogs

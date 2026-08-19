@@ -8,7 +8,7 @@ One core skill holds the shared rules; six specialized skills build on it.
 
 | Skill | Use when |
 |---|---|
-| [technical-writing](plugins/technical-writer/skills/technical-writing/SKILL.md) | Any technical document. The foundation: read-first, doc classification, hard rules, audience, the pre-draft checkpoint. Carries [style.md](plugins/technical-writer/skills/technical-writing/style.md) (sentences, words, headings, banned constructions) and [truth.md](plugins/technical-writer/skills/technical-writing/truth.md) (claims, sourcing, confidence, staleness). |
+| [technical-writing](plugins/technical-writer/skills/technical-writing/SKILL.md) | Any technical document. The foundation: read-first, doc classification, hard rules, audience, the pre-draft checkpoint. Carries [style.md](plugins/technical-writer/skills/technical-writing/references/style.md) (sentences, words, headings, banned constructions) and [truth.md](plugins/technical-writer/skills/technical-writing/references/truth.md) (claims, sourcing, confidence, staleness). |
 | [writing-design-docs](plugins/technical-writer/skills/writing-design-docs/SKILL.md) | Proposals, RFCs, design docs, specs, migration plans. Skeleton, Why & What box, completeness checks. |
 | [recording-decisions](plugins/technical-writer/skills/recording-decisions/SKILL.md) | ADRs and decision log entries. |
 | [writing-changelogs](plugins/technical-writer/skills/writing-changelogs/SKILL.md) | Changelog entries and release notes. |
@@ -24,11 +24,11 @@ The rules are house-composed, but most stand on named public constructs. What ea
 |---|---|---|
 | [Nygard ADRs](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) and [MADR](https://adr.github.io/madr/) | The decision record format: context, decision, consequences, alternatives; immutability once accepted | `recording-decisions`. Divergence: the Negative consequences section is mandatory and may not be empty |
 | [Keep a Changelog](https://keepachangelog.com/) | Categories, newest-first ordering, one entry per change | `writing-changelogs`. Divergence: entries also log known issues, deferred items, and deliberate omissions, which generated changelogs cannot know |
-| [ASD-STE100](https://www.asd-ste100.org/) simplified technical English | One instruction per sentence, sentence-length ceilings, controlled-language procedure mechanics | `style.md` sentence rules, `writing-runbooks` |
-| Zinsser, On Writing Well | Plain-prose discipline: active voice, cut clutter, one term per concept | `style.md` |
-| [Google developer documentation style guide](https://developers.google.com/style/headings) | Heading types: noun phrases for concepts, task headings for procedures; sentence-case headings | `style.md` headings |
-| [digital.gov plain language](https://digital.gov/guides/plain-language/) | The case against question headings outside real FAQs | `style.md` headings |
-| [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and humanizer-style catalogs | The machine-tell inventory: negative parallelism, rule of three, importance announcements, cursed vocabulary | `style.md` banned constructions. Divergence: scoped to technical documents, coupled to review severities, and paired with a what-not-to-flag list to protect human text |
+| [ASD-STE100](https://www.asd-ste100.org/) simplified technical English | One instruction per sentence, sentence-length ceilings, controlled-language procedure mechanics | `references/style.md` sentence rules, `writing-runbooks` |
+| Zinsser, On Writing Well | Plain-prose discipline: active voice, cut clutter, one term per concept | `references/style.md` |
+| [Google developer documentation style guide](https://developers.google.com/style/headings) | Heading types: noun phrases for concepts, task headings for procedures; sentence-case headings | `references/style.md` headings |
+| [digital.gov plain language](https://digital.gov/guides/plain-language/) | The case against question headings outside real FAQs | `references/style.md` headings |
+| [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and humanizer-style catalogs | The machine-tell inventory: negative parallelism, rule of three, importance announcements, cursed vocabulary | `references/style.md` banned constructions. Divergence: scoped to technical documents, coupled to review severities, and paired with a what-not-to-flag list to protect human text |
 | [Diátaxis](https://diataxis.fr/) | The insight that document types must not mix | The classification table in `technical-writing`. Divergence: our kinds are keyed to the edit rule (normative, descriptive, historical, runbook, reference), not to reader need |
 | BLUF (bottom line up front) | Conclusion first at every level | `technical-writing` workflow, the design-doc summary |
 | [Conventional Commits](https://www.conventionalcommits.org/) and [semantic-release](https://semantic-release.gitbook.io/) | Commit subjects as the changelog, automated versioning | The release pipeline of this repo |
@@ -59,7 +59,7 @@ plugins/technical-writer/
   .codex-plugin/plugin.json
   .cursor-plugin/plugin.json
   skills/
-    technical-writing/                   # core: SKILL.md, style.md, truth.md
+    technical-writing/                   # core: SKILL.md, references/style.md, references/truth.md
     writing-design-docs/
     recording-decisions/
     writing-changelogs/

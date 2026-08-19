@@ -1,6 +1,6 @@
 ---
 name: technical-writing
-description: Use when writing, restructuring, or revising any technical document - specs, design docs, READMEs, reference documentation, plans, reports - or any prose that must survive being read twice by someone in a hurry. Foundation for the sibling document-type skills.
+description: Use when writing, restructuring, or revising any technical document - specs, design docs, READMEs, reference documentation, plans, reports - or any prose that must survive being read twice by someone in a hurry. Encodes the house style, the truth and sourcing rules, and the banned-constructions list. Use whenever repository-bound text longer than a paragraph is being produced, even if nobody says "document". Foundation for the sibling document-type skills.
 ---
 
 # Technical writing
@@ -26,7 +26,7 @@ Load this skill for any technical prose, then the matching document-type skill o
 
 ## What this skill does not do
 
-- It does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `truth.md` still bind those.
+- It does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `references/truth.md` still bind those.
 - It does not decide content: what is true comes from the sources, not from the style.
 - It does not license restyling existing documents that follow their own conventions; apply the precedence rules below.
 - A request to make a document "punchy", "compelling", or "persuasive" does not override it: the numbers persuade, the register stays plain.
@@ -55,7 +55,7 @@ When instructions conflict, apply them in this order:
 2. An explicit exception in the active document-type skill.
 3. The shared hard rules below.
 4. An explicit schema and the conventions in the target directory.
-5. Shared style preferences in `style.md`.
+5. Shared style preferences in `references/style.md`.
 
 Existing practice controls only choices that a higher rule does not settle. It cannot weaken sourcing, rewrite accepted history, or represent unverified work as shipped. A document-type exception must name the rule it bends and the boundary of the exception.
 
@@ -80,7 +80,7 @@ Non-negotiable, in every document:
 - **No em dashes, no en dashes, no ` -- ` dashes.** Use commas, colons, semicolons, periods, parentheses, or ` - ` with spaces as an aside marker. A plain hyphen serves ranges (`2026-2030`). Check all four forms before delivery.
 - **No changelog section and no "last updated" field inside a document.** Git history is the history. This holds per sentence too: describe current behavior, never the previous behavior ("this step replaced the manual check" belongs in a migration doc or release note, not in a procedure).
 - **No delivery history as narrative status in prose, comments, names, or strings**: no phases, task IDs, ticket keys, SHAs, or plan references that merely describe how work was delivered. A pinned commit may appear solely as claim evidence. Ticket keys may appear as functional metadata in tracker records, commit messages, planning documents, and citations; never in code comments or user-facing content.
-- **Never state as fact what you cannot trace** to code at a cited path, a pinned commit, a test, a document, or a primary source. A plausible guess presented as fact is worse than "the source says nothing about this." See `truth.md`.
+- **Never state as fact what you cannot trace** to code at a cited path, a pinned commit, a test, a document, or a primary source. A plausible guess presented as fact is worse than "the source says nothing about this." See `references/truth.md`.
 - **One fact, one home.** Everything else links to the owner. A summary may route, never decide: when an index and its source disagree, the source wins and the index is the bug.
 - **Accepted decisions and applied migrations are immutable.** Corrections are new dated entries, never edits to history.
 - **Headings in sentence case**, never Title Case.
@@ -90,8 +90,8 @@ Non-negotiable, in every document:
 1. **Read first** (above), and classify the document.
 2. **Declare before drafting**: audience, purpose, scope, and what the document deliberately does not cover. Infer these from the request and repository, state safe assumptions, and ask only when an unknown would materially change the result.
 3. **Draft conclusion-first** at every level: document, chapter, paragraph. No run-up, no context paragraphs before the outcome. Each chapter opens with what came out of it, not how it was approached.
-4. **Ground every claim** and label its confidence: `truth.md`.
-5. **Style pass** over sentences, words, headings, and the banned-constructions list: `style.md`.
+4. **Ground every claim** and label its confidence: `references/truth.md`.
+5. **Style pass** over sentences, words, headings, and the banned-constructions list: `references/style.md`.
 6. **Verify before delivery**: load `reviewing-technical-prose` for the checklist. Check references by actually following them.
 
 ## Audience
