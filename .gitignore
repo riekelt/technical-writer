@@ -1,3 +1,6 @@
+# Internal research and planning artifacts, not part of the published plugin
+docs/
+
 # Node
 node_modules/
 .tmp.json

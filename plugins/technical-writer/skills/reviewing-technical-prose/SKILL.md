@@ -79,4 +79,5 @@ Before any document goes out:
 - [ ] **References checked by following them**: chapter numbers, relative links, and file names actually exist (they break silently on every restructure)
 - [ ] **Terms consistent** and defined at first use; one term per concept
 - [ ] **Read aloud**: at least the summary; no row of fragments, no three sentences with the same opening
+- [ ] **Remove-the-name test** on the opening and summary: with the product name deleted, a stranger can still tell what the text is about
 - [ ] **On a rewrite**: no fact, number, date, or source added or lost

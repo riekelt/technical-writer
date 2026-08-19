@@ -1,6 +1,6 @@
 # Technical writer
 
-Skills for writing technical documents in a strict house style: conclusion first, every claim traceable to a source, one fact in one home, and a banned-constructions list that catches machine text. Distilled from writing conventions proven across my own repositories.
+Skills for writing technical documents in a strict house style: conclusion first, every claim traceable to a source, one fact in one home, and a banned-constructions list that catches machine text. Distilled from writing conventions used across my own repositories.
 
 One core skill holds the shared rules; five document-type skills build on it.
 
@@ -12,6 +12,26 @@ One core skill holds the shared rules; five document-type skills build on it.
 | [writing-changelogs](plugins/technical-writer/skills/writing-changelogs/SKILL.md) | Changelog entries and release notes. |
 | [writing-runbooks](plugins/technical-writer/skills/writing-runbooks/SKILL.md) | Runbooks, setup guides, troubleshooting, procedures. |
 | [reviewing-technical-prose](plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md) | Reviewing or rewriting someone else's text; severity mapping; the delivery checklist. |
+
+## Influences and prior art
+
+The rules are house-composed, but most stand on named public constructs. What each one contributed, and where this skill set deliberately diverges:
+
+| Construct | What it contributed | Where it landed |
+|---|---|---|
+| [Nygard ADRs](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) and [MADR](https://adr.github.io/madr/) | The decision record format: context, decision, consequences, alternatives; immutability once accepted | `recording-decisions`. Divergence: the Negative consequences section is mandatory and may not be empty |
+| [Keep a Changelog](https://keepachangelog.com/) | Categories, newest-first ordering, one entry per change | `writing-changelogs`. Divergence: entries also log known issues, deferred items, and deliberate omissions, which generated changelogs cannot know |
+| [ASD-STE100](https://www.asd-ste100.org/) simplified technical English | One instruction per sentence, sentence-length ceilings, controlled-language procedure mechanics | `style.md` sentence rules, `writing-runbooks` |
+| Zinsser, On Writing Well | Plain-prose discipline: active voice, cut clutter, one term per concept | `style.md` |
+| [Google developer documentation style guide](https://developers.google.com/style/headings) | Heading types: noun phrases for concepts, task headings for procedures; sentence-case headings | `style.md` headings |
+| [digital.gov plain language](https://digital.gov/guides/plain-language/) | The case against question headings outside real FAQs | `style.md` headings |
+| [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and humanizer-style catalogs | The machine-tell inventory: negative parallelism, rule of three, importance announcements, cursed vocabulary | `style.md` banned constructions. Divergence: scoped to technical documents, coupled to review severities, and paired with a what-not-to-flag list to protect human text |
+| [Diátaxis](https://diataxis.fr/) | The insight that document types must not mix | The classification table in `technical-writing`. Divergence: our kinds are keyed to the edit rule (normative, descriptive, historical, runbook, reference), not to reader need |
+| BLUF (bottom line up front) | Conclusion first at every level | `technical-writing` workflow, the design-doc summary |
+| [Conventional Commits](https://www.conventionalcommits.org/) and [semantic-release](https://semantic-release.gitbook.io/) | Commit subjects as the changelog, automated versioning | The release pipeline of this repo |
+| [multi-agent-review](https://github.com/riekelt/multi-agent-review) | The plugin and marketplace repository structure, and the severity-tagged finding format with a named empty case | The repo layout, `reviewing-technical-prose` |
+
+The parts with no found prior art, per an August 2026 survey of public agent skills, style guides, and tooling: the per-kind edit semantics (never water a normative doc down to match violating code), claim provenance with confidence tiers, the staleness rules, one fact one home with "the source wins and the index is the bug", the rewrite rule that an added fact counts as an error like a lost one, and the remove-the-name test.
 
 ## Install
 

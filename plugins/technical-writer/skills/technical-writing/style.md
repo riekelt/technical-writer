@@ -24,7 +24,10 @@ These rules bind running prose in technical documents. They deliberately do not 
 - Metaphor only where it explains something the literal description cannot. In gates and procedures the action wins: "the release stops until the PO approves", not "the train waits". A domain term that happens to be a metaphor may stay; the decoration around it goes.
 - Keep the register steady. A plain engineering account must not turn into a slogan, a sales page, or an academic abstract for one paragraph.
 
-Close with the read-aloud rule: read the paragraph aloud, and rewrite whatever you would not say to a colleague. That check catches the stiffness the rules above miss.
+Close with two self-checks:
+
+- **The read-aloud rule.** Read the paragraph aloud, and rewrite whatever you would not say to a colleague. That check catches the stiffness the rules above miss.
+- **The remove-the-name test.** For any text about a specific system (a README opening, an overview, a design doc summary): delete the product name and reread. If a stranger could no longer tell what the text is about, it is generic and carries no information; rewrite from the system's own specifics. Does not apply to reference tables and procedures, which are legitimately generic in shape.
 
 ## Headings name the content
 

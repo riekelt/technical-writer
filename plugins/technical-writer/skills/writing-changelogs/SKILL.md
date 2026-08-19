@@ -44,3 +44,17 @@ The entries almost nobody writes, and the reason a changelog becomes citable:
 - **Deliberate omissions**, described by category, so the same omission is not re-litigated or mistaken for an oversight.
 
 Never mark anything shipped, deployed, or verified unless that exact action was completed and checked. Distinguish implemented (in the repo) from deployed (live) from externally verified.
+
+## Handover / completion summary
+
+For handing finished work to a reviewer or operator, the sections most handovers lack and readers most need:
+
+1. Why this work exists
+2. What shipped
+3. Where to point the review (the decisions a reviewer must understand before judging)
+4. Verification status: exact commands and their results, never a bare checkmark
+5. Honest caveats and things I got wrong
+6. Residual risks and what NOT to do
+7. State and what is owed (merged-not-pushed, migrations, ordered steps with the consequence of wrong ordering)
+
+Naming a section for self-reported error makes it socially safe to write.
