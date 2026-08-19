@@ -1,6 +1,6 @@
 ---
 name: writing-runbooks
-description: Use when writing operational documentation - runbooks, setup guides, release procedures, troubleshooting entries, or any ordered procedure someone will execute under time pressure. Encodes the runbook skeleton, the risk legend, and the symptom-first troubleshooting format. Use whenever someone will execute the text, even if it is called a "guide" or "setup notes".
+description: Use when writing operational documentation - runbooks, setup guides, release procedures, migration guides, deprecation guides, troubleshooting entries, or any ordered procedure someone will execute under time pressure. Encodes the runbook skeleton, the risk legend, the symptom-first troubleshooting format, and the migration-guide rules (mapping table, mandatory rollback, deprecation dates, built-in expiry). Use whenever someone will execute the text, even if it is called a "guide" or "setup notes".
 ---
 
 # Writing runbooks
@@ -36,6 +36,7 @@ app sync run --live --approval-token=...
 ```
 
 - Ordered steps state the consequence of wrong ordering inline: "deploy jar, then DB cleanup; wrong order = silent data loss."
+- Every state-changing procedure names its rollback, or states plainly that none exists and what that means. A missing undo path is a finding, not an omission the reader discovers mid-incident.
 - End with a "verify it worked" section: the observable end state and the command that proves it.
 - Mark the preferred path "(recommended)" when several paths exist; document UI and CLI for the same task side by side rather than twice.
 - If the runbook will shrink when tooling lands, say so: "when X lands, steps 2 to 4 become one command and this document keeps only the judgment."
@@ -52,6 +53,16 @@ Symptom-first, because the reader arrives with an error message and no vocabular
 ```
 
 Order diagnostic steps cheapest first. Group entries by failure class. Cross-link the deeper doc instead of inlining it.
+
+## Migration and deprecation guides
+
+A migration guide is a runbook whose subject is the change itself. Everything above applies, plus five rules of its own. The surrounding documents are handled by their own skills: the argument for the migration is a design doc, the decision to deprecate is an ADR, the announcement is a changelog entry; this section is the guide the reader executes.
+
+1. **History is the content here, stated positively.** The before/after comparison is the job, not a violation: this is the document class the no-history hard rule explicitly carves out. Write "the tag now replaces the manual version bump" freely; that sentence is banned everywhere else and load-bearing here.
+2. **The mapping table is the core artifact.** Readers arrive knowing the old world; give them old → new per behavior, config key, command, or API, one row each. Prose explains the rows that need it; the table carries the migration.
+3. **Rollback is mandatory, per step.** Every step names its undo, or states plainly that it is irreversible and what that means for the ordering around it. A migration guide without rollback paths is a proposal to strand people mid-migration.
+4. **The deprecation contract carries dates.** What stops working, on which date, what happens to stragglers, and where the escape hatch is until then. "Will be removed in a future release" is a banned vague owner wearing a calendar.
+5. **Born with an expiry.** A migration guide is temporary by design: when the migration completes, it reclassifies as historical and gets the superseded banner pointing at the current-state documentation, never silent deletion. State the completion condition in the guide itself.
 
 ## Operator-facing strings
 

@@ -22,6 +22,8 @@ Load this skill for any technical prose, then the matching document-type skill o
 | A changelog entry, release notes, "what shipped" | `writing-changelogs` |
 | A runbook, setup guide, procedure, troubleshooting entry | `writing-runbooks` |
 | A tracker item: epic, story, task, bug report, spike, acceptance criteria | `writing-issues` |
+| A migration or deprecation guide | `writing-runbooks` |
+| A postmortem, incident report, root-cause analysis | `writing-postmortems` |
 | Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
 
 ## What this skill does not do
@@ -110,6 +112,7 @@ Writing for several groups at once: the summary reads for the broadest group, th
 ## Common mistakes
 
 - Starting at the solution. First the problem, then the proposal.
+- Documenting what the code already shows. Documents own reasoning, constraints, invariants, and alternatives; the code owns the what.
 - Unverifiable claims: "faster", "better" without a number or source. Add the number or cut the claim.
 - Filling a gap with a plausible guess instead of naming the gap.
 - Vague owners: "this still needs investigation" without a name or role.

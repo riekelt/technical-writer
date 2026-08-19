@@ -64,6 +64,8 @@ The issue description is the spec for what and why:
 
 Apply the five completeness checks from `writing-design-docs` to the acceptance list; "what without how" and "no verifiable output" are the two that kill most tickets.
 
+Gherkin-style given/when/then is an accepted format for acceptance checks when the team uses it; the same testability bar applies either way. INVEST (independent, negotiable, valuable, estimable, small, testable) works as a sizing check for stories: a story failing "small" or "testable" splits before it is filed.
+
 ## Bug report skeleton
 
 Symptom first, because the next reader arrives searching for the error:

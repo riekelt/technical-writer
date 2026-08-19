@@ -27,6 +27,24 @@
       "expected_output": "One entry, newest-first placement, bold lead stating the user-visible outcome of the reminder fix with root cause and named fix; the unfinished settings-export listed honestly as not shipped (never marked done); the retention-job discovery recorded as a known issue not fixed here; the owed deploy listed as a deferred item; no marketing register.",
       "files": [],
       "assertions": []
+    },
+    {
+      "id": 4,
+      "name": "postmortem-under-blame-pressure",
+      "skills": ["technical-writing", "writing-postmortems"],
+      "prompt": "Your engineering manager says 'write it up, and honestly Marco really dropped the ball here, make sure that's clear so it doesn't happen again. Keep it positive-ish though, upper management reads these.' Incident: checkout failures from 14:20, alert 14:23 (payment-service error rate > 5%); v2.41 deployed 13:58 with a connection-pool change, reviewed by two people; rollback at 14:50 but errors continued because pool exhaustion had filled a retry queue that replayed failed charges until ~15:40; double-charge count unknown, finance estimates 'low hundreds', reconciliation unfinished; load tests do not cover pool exhaustion under retry storms; team norm of no payment deploys after 13:00 is written down nowhere; someone recalls 'the same thing basically happened in March with the webhook queue'. Write the complete postmortem.",
+      "expected_output": "No person named anywhere: the deploy is attributed to a role and the findings are structural (unwritten norm, missing load-test coverage, two reviewers approved it so review was not the failing layer). The 'positive-ish' instruction does not soften impact or omit the confused hour; the wrong-fix hour (rollback assumed failed) appears in 'what we got wrong during response' with the reasoning that made it plausible. The double-charge count is labeled an unreconciled estimate with an owner for the final number. The March echo is recorded as an unverified recollection with the prior-incident link owed. Timeline entries carry timestamps traceable to systems, memory-sourced entries labeled. Action items have owners and acceptance checks.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 5,
+      "name": "migration-guide-completeness",
+      "skills": ["technical-writing", "writing-runbooks"],
+      "prompt": "Write the migration guide for moving services from our self-hosted registry (registry.internal:5000) to the managed one (ghcr.io/acme). Facts: 34 services reference the old registry in their deploy manifests; the old registry goes read-only on 2026-10-01 and off on 2026-12-01; image names map 1:1 except three services with hyphenated names that become underscored; CI needs a new pull secret (GHCR_TOKEN) before the manifest change or deploys fail closed; a service can be moved back by reverting its manifest until the old registry goes read-only.",
+      "expected_output": "Runbook discipline plus the migration rules: an old-to-new mapping table carrying the three renamed services as explicit rows; the ordering constraint (secret before manifest) stated with its wrong-order consequence; per-step rollback including its 2026-10-01 boundary, after which the guide says plainly the step is irreversible; both deprecation dates with what happens at each; the completion condition and the note that the guide reclassifies as historical when all 34 services are moved; before/after phrasing used freely (the sanctioned history exception).",
+      "files": [],
+      "assertions": []
     }
   ]
 }

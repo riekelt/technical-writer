@@ -29,7 +29,7 @@ One requirement above all rules: **the content stays identical.** Work in this o
 
 1. Read the source and mark every banned construction and word-choice violation.
 2. Write a version and read it aloud.
-3. Ask two control questions: which sentence still sounds like a language model, and did the rewrite add or drop a fact, number, date, name, source, or claim?
+3. Ask three control questions: which sentence still sounds like a language model; did the rewrite add or drop a fact, number, date, name, source, or claim; and does the rewrite recreate a removed pattern in a new rhetorical form? Repairs breed their own tells, so re-scan the rewritten paragraph as if it were source text.
 4. Repair what the control questions surface. An addition and a loss both count as errors, even when the text reads better for it.
 
 Never add a fact to finish a sentence: ask the author or pick a simpler sentence. If a sentence stays wooden after two attempts, rewrite the whole paragraph around its main point. Change only running prose: code blocks, frontmatter, table data, and link targets stay as they are.

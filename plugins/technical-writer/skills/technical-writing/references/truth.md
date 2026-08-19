@@ -31,6 +31,12 @@ Never claim a state you have not verified. Distinguish written (exists in the re
 - Carry known weaknesses forward instead of quietly dropping them. A deliberate limitation "has a known cost and it should be stated rather than discovered later."
 - Name the role or the dependency on a process problem, never the person, in a document that circulates.
 
+## Reviewed documents
+
+When a document requires approval, keep a dated sign-off log: `- YYYY-MM-DD <reviewer>: approved <scope>`, one line per review event. A document that changed after its latest sign-off counts as unreviewed; where tooling exists, fail the gate when content is newer than the last sign-off line.
+
+This is a named exception to the no-changelog rule, allowed because approval events are not derivable from git history: the log records reviews, never edits. It lives beside the document or in a companion file, and it stays append-only.
+
 ## Keeping documents true
 
 - **Docs update in the same change** as the thing they describe. Documentation is part of done, not a follow-up ticket.
@@ -40,6 +46,8 @@ Never claim a state you have not verified. Distinguish written (exists in the re
 - **A document that names its own stale regions is more trustworthy than one that is merely current.** Surface staleness as a visible note instead of leaving a wrong picture in place.
 - **Retired false claims get a regression check** (a grep in CI or a checklist line) so they cannot silently come back.
 - **Indexes are derived artifacts.** Rebuild them from the leaves and verify counts against the actual files; every entry gets a one-line purpose.
+- **A descriptive document names the code it describes.** Put the path (a module, a directory, an entry point) in the front matter or the opening, so drift checks have an anchor. A path is not a date; this does not violate the no-freshness-fields rule.
+- **Coverage is counted, not felt.** When auditing documentation, count documented items against total public items (endpoints, commands, config keys) rather than judging completeness by impression.
 - **Diagrams are source-controlled text** (Mermaid, PlantUML), rendered output is derived: delete stale renders rather than letting them mislead, and note which sources await re-rendering. Everything legible in an image is a claim, subject to the same rules as prose; a picture does not look like a claim, which is exactly why it escapes review.
 - **Tense must match status.** A dormant system cannot take the present tense; an unreleased one cannot imply availability.
 - **Sentence-level history ban:** "was refactored to", "now uses", "replaces the old" describe an edit, not the system. Explain what the system does; keep the diff only where the history itself is the evidence (migration docs, release notes).

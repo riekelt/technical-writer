@@ -18,9 +18,11 @@ Invoke after shipping a meaningful change (a feature, a fix of real size, a remo
 ## Rules
 
 - One entry per shipped change, newest first, ISO dates, grouped by version where versions exist. Strict, not marketing.
-- Standard categories where the file uses them: Added / Changed / Fixed / Removed / Security.
+- Standard categories where the file uses them: Added / Changed / Deprecated / Fixed / Removed / Security. A Deprecated entry carries the removal date and the replacement.
+- **Breaking changes lead the entry**, above the categories, each with the required migration action stated (and the migration guide linked when one exists). A breaking change buried under Added is the entry the reader needed most and found last.
 - User-visible impact over implementation detail; present tense, active voice; no jargon the reader would not know; group related changes; never duplicate an existing entry.
 - Record removals, not just additions: readers chase dead concepts otherwise.
+- Release notes are the audience-facing cut of the same facts: what changed, who it affects, what to do about it. The changelog speaks to engineers; release notes to users of the system. Same sources, different register, never contradicting each other.
 
 ## Entry shape
 

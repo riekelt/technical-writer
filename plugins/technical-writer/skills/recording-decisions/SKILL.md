@@ -15,6 +15,8 @@ Two formats, by weight. A full ADR for a decision with architecture-level conseq
 
 Invoke when a choice has been made and needs recording, when someone asks "write down why we did this", or when an existing decision is superseded. Do NOT invoke for a decision still being argued (that is `writing-design-docs`; the Why & What box becomes the ADR once accepted), and never edit an accepted ADR or an existing log entry: supersede it.
 
+Also invoke on the phrases that signal an unrecorded decision passing by: "we decided X instead of Y", "let's just go with", a trade-off resolved in a PR comment or chat thread, or a rationale someone has now explained twice. Each of those is a decision living in a non-durable place; offer to record it.
+
 Record the decision before citing it. A chat session is not a durable source: put the dated substance in the log, quote the decider where wording matters, and commit it first. Record the smallest complete decision, not a transcript.
 
 ## ADR
