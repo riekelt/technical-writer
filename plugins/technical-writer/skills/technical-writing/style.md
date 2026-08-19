@@ -57,7 +57,7 @@ Each entry names the pattern; the quoted phrases are examples, and paraphrases o
 | Recap sentence | "Overall", "In conclusion", "The bottom line" | End on the last fact |
 | Restatement for emphasis | A second sentence repeating the first with more force | Keep the better one |
 | Rhetorical triad / rule of three | "faster, safer, and more predictable" | Two items, four items, or the one measured claim: "saves two manual steps per release" |
-| Question headings and indirect-question headings | "Why this matters", "What X means", "How does Y work?" | Noun phrase naming the content (see templates.md); real questions only in a genuine FAQ |
+| Question headings and indirect-question headings | "Why this matters", "What X means", "How does Y work?" | Noun phrase naming the content (see "Headings name the content" above); real questions only in a genuine FAQ |
 | Throat clearing | "There are several ways to", "In order to", "This document will explore" | Start with the thing the sentence is about |
 | Filler | "concretely", "in practice", "note that", "essentially", "basically", "the core is" | Delete |
 | Inflated adjectives | crucial, robust, fundamental, essential, significant, seamless, comprehensive | A number, a named property, or nothing |

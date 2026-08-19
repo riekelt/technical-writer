@@ -24,6 +24,8 @@ Invoke after shipping a meaningful change (a feature, a fix of real size, a remo
 
 ## Entry shape
 
+**Document-type exception:** the bold leads required below override the shared ban on bold-lead bullets. The exception covers changelog outcomes and the named known-issue, deferred-item, and omission categories only. Repeated label-value bullets remain banned elsewhere.
+
 **Bold lead stating the outcome**, then root cause, then the fix, with exact names inline:
 
 ```markdown

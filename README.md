@@ -2,7 +2,7 @@
 
 Skills for writing technical documents in a strict house style: conclusion first, every claim traceable to a source, one fact in one home, and a banned-constructions list that catches machine text. Distilled from writing conventions used across my own repositories.
 
-One core skill holds the shared rules; five document-type skills build on it.
+One core skill holds the shared rules; six specialized skills build on it.
 
 | Skill | Use when |
 |---|---|
@@ -62,6 +62,7 @@ plugins/technical-writer/
     recording-decisions/
     writing-changelogs/
     writing-runbooks/
+    writing-issues/
     reviewing-technical-prose/
 ```
 

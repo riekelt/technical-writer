@@ -1,7 +1,7 @@
 {
   "name": "technical-writer",
   "version": "1.1.0",
-  "description": "House-style technical writing: a core style and truth skill plus per-document-type skills for design docs, decisions, changelogs, runbooks, and prose review",
+  "description": "House-style technical writing: a core style and truth skill plus specialized skills for design docs, decisions, changelogs, runbooks, tracker issues, and prose review",
   "author": {
     "name": "riekelt",
     "email": "r@kapitein.nl",
@@ -23,8 +23,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Technical Writer",
-    "shortDescription": "Write specs, decisions, changelogs, and runbooks in a strict house style: conclusion first, every claim sourced, no machine tells.",
-    "longDescription": "A skill set for technical documents. The core skill carries the house style (conclusion-first structure, sentence and word rules, a banned-constructions list that catches machine text) and the truth rules (every claim traceable, unknowns explicitly unknown, docs describe current behavior only). Five document-type skills build on it: design docs and specs, ADRs and decision logs, changelogs, runbooks and troubleshooting, and reviewing or rewriting someone else's technical prose.",
+    "shortDescription": "Write specs, decisions, changelogs, runbooks, and tracker issues in a strict house style: conclusion first, every claim sourced, no machine tells.",
+    "longDescription": "A skill set for technical documents. The core skill carries the house style (conclusion-first structure, sentence and word rules, a banned-constructions list that catches machine text) and the truth rules (every claim traceable, unknowns explicitly unknown, docs describe current behavior only). Six specialized skills build on it: design docs and specs, ADRs and decision logs, changelogs, runbooks and troubleshooting, tracker issues and acceptance criteria, and reviewing or rewriting someone else's technical prose.",
     "developerName": "riekelt",
     "category": "Writing",
     "capabilities": [

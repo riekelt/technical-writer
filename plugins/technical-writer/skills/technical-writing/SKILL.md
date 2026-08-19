@@ -28,26 +28,36 @@ Load this skill for any technical prose, then the matching document-type skill o
 
 - It does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `truth.md` still bind those.
 - It does not decide content: what is true comes from the sources, not from the style.
-- It does not license restyling existing documents that follow their own conventions; matching the folder wins (below).
+- It does not license restyling existing documents that follow their own conventions; apply the precedence rules below.
 - A request to make a document "punchy", "compelling", or "persuasive" does not override it: the numbers persuade, the register stays plain.
 
 ## Mandatory checkpoint before drafting
 
-Before writing any document or section, state in one line:
+Before drafting a new document or substantial section, derive and state in working notes:
 
 `Kind: <normative|descriptive|historical|runbook|reference> | Audience: <who> | Purpose: <the verb the reader must accomplish> | Non-goals: <what this deliberately does not cover>`
 
-If you cannot fill every field with specifics, stop and ask; do not guess and do not default. This checkpoint forces every structural choice to connect back to a reader.
+Fill the fields from the request, sources, and repository context. State a safe assumption and continue when it does not materially change the result. Ask only when an unknown would change the audience, substance, or scope. Never invent a fact to complete the checkpoint, and do not insert the checkpoint into the finished document unless its schema requires it.
 
 ## Read first, then write
 
 The most important step and the one most often skipped. Before writing a line:
 
-1. Read at least two existing documents in the same directory. Adopt their structure, tone, and conventions. A new document should look written by the same hand.
+1. Read up to two comparable documents in the same directory. Adopt their structure, tone, and conventions. When fewer than two comparable documents exist, read every available example and then use repository-level conventions. Do not block because the directory is new.
 2. Check for a `README.md` that indexes the documents. If it exists, add the new document to it.
 3. Check whether the topic already lives somewhere. Extending the owner is almost always better than starting a rival document beside it.
 
-Matching the existing practice outranks every style rule here. Where a rule conflicts with the folder's practice, follow the practice and name the deviation.
+## Rule precedence
+
+When instructions conflict, apply them in this order:
+
+1. Truth, safety, and historical-integrity rules.
+2. An explicit exception in the active document-type skill.
+3. The shared hard rules below.
+4. An explicit schema and the conventions in the target directory.
+5. Shared style preferences in `style.md`.
+
+Existing practice controls only choices that a higher rule does not settle. It cannot weaken sourcing, rewrite accepted history, or represent unverified work as shipped. A document-type exception must name the rule it bends and the boundary of the exception.
 
 ## Classify the document before editing it
 
@@ -69,7 +79,7 @@ Non-negotiable, in every document:
 
 - **No em dashes, no en dashes, no ` -- ` dashes.** Use commas, colons, semicolons, periods, parentheses, or ` - ` with spaces as an aside marker. A plain hyphen serves ranges (`2026-2030`). Check all four forms before delivery.
 - **No changelog section and no "last updated" field inside a document.** Git history is the history. This holds per sentence too: describe current behavior, never the previous behavior ("this step replaced the manual check" belongs in a migration doc or release note, not in a procedure).
-- **No delivery history in prose, comments, names, or strings**: no phases, task IDs, ticket keys, SHAs, or plan references. Provenance lives in commits, the tracker, and planning docs. Ticket keys are allowed in commit messages and planning docs, never in code comments.
+- **No delivery history as narrative status in prose, comments, names, or strings**: no phases, task IDs, ticket keys, SHAs, or plan references that merely describe how work was delivered. A pinned commit may appear solely as claim evidence. Ticket keys may appear as functional metadata in tracker records, commit messages, planning documents, and citations; never in code comments or user-facing content.
 - **Never state as fact what you cannot trace** to code at a cited path, a pinned commit, a test, a document, or a primary source. A plausible guess presented as fact is worse than "the source says nothing about this." See `truth.md`.
 - **One fact, one home.** Everything else links to the owner. A summary may route, never decide: when an index and its source disagree, the source wins and the index is the bug.
 - **Accepted decisions and applied migrations are immutable.** Corrections are new dated entries, never edits to history.
@@ -78,7 +88,7 @@ Non-negotiable, in every document:
 ## Workflow
 
 1. **Read first** (above), and classify the document.
-2. **Declare before drafting**: audience, purpose, scope, and what the document deliberately does not cover. If you cannot answer these with specifics, stop and ask; do not guess.
+2. **Declare before drafting**: audience, purpose, scope, and what the document deliberately does not cover. Infer these from the request and repository, state safe assumptions, and ask only when an unknown would materially change the result.
 3. **Draft conclusion-first** at every level: document, chapter, paragraph. No run-up, no context paragraphs before the outcome. Each chapter opens with what came out of it, not how it was approached.
 4. **Ground every claim** and label its confidence: `truth.md`.
 5. **Style pass** over sentences, words, headings, and the banned-constructions list: `style.md`.
