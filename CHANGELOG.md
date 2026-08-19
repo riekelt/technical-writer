@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/riekelt/technical-writer/compare/v1.2.0...v1.3.0) (2026-08-19)
+
+
+### Features
+
+* postmortems skill, migration guides, and field-research imports ([299574c](https://github.com/riekelt/technical-writer/commit/299574c872746e4ca0f90f9e970dc07264bd9372))
+
 # [1.2.0](https://github.com/riekelt/technical-writer/compare/v1.1.1...v1.2.0) (2026-08-19)
 
 
