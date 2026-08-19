@@ -1,0 +1,24 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@semantic-release/changelog", {
+      "changelogFile": "CHANGELOG.md"
+    }],
+    ["@semantic-release/exec", {
+      "prepareCmd": "V='${nextRelease.version}'; for f in plugins/technical-writer/.claude-plugin/plugin.json plugins/technical-writer/.codex-plugin/plugin.json plugins/technical-writer/.cursor-plugin/plugin.json package.json; do jq --arg v \"$V\" '.version = $v' \"$f\" > .tmp.json && mv .tmp.json \"$f\"; done"
+    }],
+    ["@semantic-release/git", {
+      "assets": [
+        "CHANGELOG.md",
+        "package.json",
+        "plugins/technical-writer/.claude-plugin/plugin.json",
+        "plugins/technical-writer/.codex-plugin/plugin.json",
+        "plugins/technical-writer/.cursor-plugin/plugin.json"
+      ],
+      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }],
+    "@semantic-release/github"
+  ]
+}

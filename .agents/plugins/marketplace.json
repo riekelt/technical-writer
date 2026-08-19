@@ -1,0 +1,20 @@
+{
+  "name": "technical-writer",
+  "interface": {
+    "displayName": "Technical Writer"
+  },
+  "plugins": [
+    {
+      "name": "technical-writer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/technical-writer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Writing"
+    }
+  ]
+}

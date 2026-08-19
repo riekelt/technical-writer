@@ -1,0 +1,107 @@
+---
+name: technical-writing
+description: Use when writing, restructuring, or revising any technical document - specs, design docs, READMEs, reference documentation, plans, reports - or any prose that must survive being read twice by someone in a hurry. Foundation for the sibling document-type skills.
+---
+
+# Technical writing
+
+## Overview
+
+House style for English technical documents, composed from conventions proven across my repositories. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one, because the author is the one saying it out loud.
+
+These rules govern documents, not chat replies. Length and section rules apply to running prose, not to reference lists like this file.
+
+## When to invoke
+
+Load this skill for any technical prose, then the matching document-type skill on top. These are routing hints; each skill's own body is the authority.
+
+| The task is | Also load |
+|---|---|
+| A proposal, RFC, design doc, spec, or migration plan | `writing-design-docs` |
+| Recording a decision, an ADR, a decision log entry | `recording-decisions` |
+| A changelog entry, release notes, "what shipped" | `writing-changelogs` |
+| A runbook, setup guide, procedure, troubleshooting entry | `writing-runbooks` |
+| Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
+
+## What this skill does not do
+
+- It does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `truth.md` still bind those.
+- It does not decide content: what is true comes from the sources, not from the style.
+- It does not license restyling existing documents that follow their own conventions; matching the folder wins (below).
+- A request to make a document "punchy", "compelling", or "persuasive" does not override it: the numbers persuade, the register stays plain.
+
+## Mandatory checkpoint before drafting
+
+Before writing any document or section, state in one line:
+
+`Kind: <normative|descriptive|historical|runbook|reference> | Audience: <who> | Purpose: <the verb the reader must accomplish> | Non-goals: <what this deliberately does not cover>`
+
+If you cannot fill every field with specifics, stop and ask; do not guess and do not default. This checkpoint forces every structural choice to connect back to a reader.
+
+## Read first, then write
+
+The most important step and the one most often skipped. Before writing a line:
+
+1. Read at least two existing documents in the same directory. Adopt their structure, tone, and conventions. A new document should look written by the same hand.
+2. Check for a `README.md` that indexes the documents. If it exists, add the new document to it.
+3. Check whether the topic already lives somewhere. Extending the owner is almost always better than starting a rival document beside it.
+
+Matching the existing practice outranks every style rule here. Where a rule conflicts with the folder's practice, follow the practice and name the deviation.
+
+## Classify the document before editing it
+
+The edit rule differs per kind. "Update docs to match code" is actively wrong for two of the five.
+
+| Kind | Examples | Edit rule |
+|---|---|---|
+| Normative | architecture principles, contracts, style guides | If code violates the contract, do NOT water the contract down; record the violation. Edit only when the contract itself names deleted or renamed concepts. |
+| Descriptive | flows, component docs, state machines | Update to match code exactly. Verify against implementations, not names. |
+| Historical | changelogs, old specs, decision logs, applied migrations | Never rewrite history. Flag discrepancies; supersede with a new entry. |
+| Runbook | operations, troubleshooting, release procedures | Update to match reality; every step must have been actually run. |
+| Reference | API docs, config references, indexes | Exhaustive: every key, every flag, with defaults and a Usage column. |
+
+If an entire document describes something deleted, do not delete the file: mark it obsolete with a one-line banner ("> NOTE: describes removed component X; see Y") and leave the removal to the owner.
+
+## Hard rules
+
+Non-negotiable, in every document:
+
+- **No em dashes, no en dashes, no ` -- ` dashes.** Use commas, colons, semicolons, periods, parentheses, or ` - ` with spaces as an aside marker. A plain hyphen serves ranges (`2026-2030`). Check all four forms before delivery.
+- **No changelog section and no "last updated" field inside a document.** Git history is the history. This holds per sentence too: describe current behavior, never the previous behavior ("this step replaced the manual check" belongs in a migration doc or release note, not in a procedure).
+- **No delivery history in prose, comments, names, or strings**: no phases, task IDs, ticket keys, SHAs, or plan references. Provenance lives in commits, the tracker, and planning docs. Ticket keys are allowed in commit messages and planning docs, never in code comments.
+- **Never state as fact what you cannot trace** to code at a cited path, a pinned commit, a test, a document, or a primary source. A plausible guess presented as fact is worse than "the source says nothing about this." See `truth.md`.
+- **One fact, one home.** Everything else links to the owner. A summary may route, never decide: when an index and its source disagree, the source wins and the index is the bug.
+- **Accepted decisions and applied migrations are immutable.** Corrections are new dated entries, never edits to history.
+- **Headings in sentence case**, never Title Case.
+
+## Workflow
+
+1. **Read first** (above), and classify the document.
+2. **Declare before drafting**: audience, purpose, scope, and what the document deliberately does not cover. If you cannot answer these with specifics, stop and ask; do not guess.
+3. **Draft conclusion-first** at every level: document, chapter, paragraph. No run-up, no context paragraphs before the outcome. Each chapter opens with what came out of it, not how it was approached.
+4. **Ground every claim** and label its confidence: `truth.md`.
+5. **Style pass** over sentences, words, headings, and the banned-constructions list: `style.md`.
+6. **Verify before delivery**: load `reviewing-technical-prose` for the checklist. Check references by actually following them.
+
+## Audience
+
+The same subject needs a different cut per reader. Know who you write for before starting. Not "users": the actual person, where they are, and the verb they must accomplish.
+
+| Reader | What they need |
+|---|---|
+| Developers | The why behind the choice, and what changes about their work tomorrow |
+| Tech leads / architects | Trade-offs, alternatives, long-term consequences |
+| Management / PO | What it yields, what it costs, which risks |
+| External parties | No internal team names or jargon without explanation |
+
+Writing for several groups at once: the summary reads for the broadest group, the rest may deepen. If a phrase would need a footnote, it needs rewriting rather than a footnote.
+
+## Common mistakes
+
+- Starting at the solution. First the problem, then the proposal.
+- Unverifiable claims: "faster", "better" without a number or source. Add the number or cut the claim.
+- Filling a gap with a plausible guess instead of naming the gap.
+- Vague owners: "this still needs investigation" without a name or role.
+- Listing only benefits. Every proposal names its costs.
+- Silently trimming, reordering for emphasis, or restyling a host document during an edit pass. Edits are surgical: preserve voice, structure, numbering, and IDs.
+- A document that grows past roughly 800 lines of prose while nobody looks: split it and let the main document point.

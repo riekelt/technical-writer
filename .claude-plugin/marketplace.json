@@ -1,0 +1,15 @@
+{
+  "name": "technical-writer",
+  "description": "House-style technical writing skills: design docs, decisions, changelogs, runbooks, and prose review",
+  "owner": {
+    "name": "riekelt",
+    "email": "r@kapitein.nl"
+  },
+  "plugins": [
+    {
+      "name": "technical-writer",
+      "source": "./plugins/technical-writer",
+      "category": "Writing"
+    }
+  ]
+}

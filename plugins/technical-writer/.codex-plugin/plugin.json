@@ -1,0 +1,46 @@
+{
+  "name": "technical-writer",
+  "version": "1.0.0",
+  "description": "House-style technical writing: a core style and truth skill plus per-document-type skills for design docs, decisions, changelogs, runbooks, and prose review",
+  "author": {
+    "name": "riekelt",
+    "email": "r@kapitein.nl",
+    "url": "https://github.com/riekelt"
+  },
+  "homepage": "https://github.com/riekelt/technical-writer",
+  "repository": "https://github.com/riekelt/technical-writer",
+  "license": "MIT",
+  "keywords": [
+    "technical-writing",
+    "documentation",
+    "design-docs",
+    "adr",
+    "changelog",
+    "runbook",
+    "prose-review",
+    "style-guide"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Technical Writer",
+    "shortDescription": "Write specs, decisions, changelogs, and runbooks in a strict house style: conclusion first, every claim sourced, no machine tells.",
+    "longDescription": "A skill set for technical documents. The core skill carries the house style (conclusion-first structure, sentence and word rules, a banned-constructions list that catches machine text) and the truth rules (every claim traceable, unknowns explicitly unknown, docs describe current behavior only). Five document-type skills build on it: design docs and specs, ADRs and decision logs, changelogs, runbooks and troubleshooting, and reviewing or rewriting someone else's technical prose.",
+    "developerName": "riekelt",
+    "category": "Writing",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Write a design doc for this change following the house style.",
+      "Review this document against the house writing rules."
+    ],
+    "websiteURL": "https://github.com/riekelt/technical-writer",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "brandColor": "#0F766E",
+    "composerIcon": "",
+    "logo": "",
+    "screenshots": []
+  }
+}
