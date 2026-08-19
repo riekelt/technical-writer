@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/riekelt/technical-writer/compare/v1.0.1...v1.1.0) (2026-08-19)
+
+
+### Features
+
+* writing-issues skill for tracker items ([a74fbbd](https://github.com/riekelt/technical-writer/commit/a74fbbd2fa38466d1746daac55df85633e88d5cd))
+
 ## [1.0.1](https://github.com/riekelt/technical-writer/compare/v1.0.0...v1.0.1) (2026-08-19)
 
 
