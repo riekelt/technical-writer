@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/riekelt/technical-writer/compare/v1.3.0...v1.4.0) (2026-08-20)
+
+
+### Features
+
+* measured trigger evals and a pushier core description ([4dfaf4d](https://github.com/riekelt/technical-writer/commit/4dfaf4dbd10c984ecdbf06253cc2473e6a2fc47c))
+
 # [1.3.0](https://github.com/riekelt/technical-writer/compare/v1.2.0...v1.3.0) (2026-08-19)
 
 
