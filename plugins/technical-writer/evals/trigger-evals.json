@@ -1,0 +1,34 @@
+{
+  "measured": "2026-08-20",
+  "method": "Each query was routed by a haiku agent given the full 29-entry roster (19 skills across the technical-writer, principal-engineer, and multi-agent-review plugins, plus 10 real distractor skills) and asked which single skill it would consult first. Proxy measurement of description quality, not of live-session triggering. Routing agents must run with worktree isolation and router-not-executor framing: task-shaped query text has been executed by an agent once.",
+  "targets": {
+    "technical-writing": { "pass": 12, "total": 12 },
+    "reviewing-technical-prose": { "pass": 12, "total": 12, "note": "rp06 (reviewing a postmortem for tone) routes stably to writing-postmortems; accepted as a correct alternate landing since its cross-references route onward. Observation: essay-review queries also land on reviewing-technical-prose because nothing in the roster owns non-technical prose; mild over-trigger, tolerated." }
+  },
+  "queries": [
+    { "id": "tw01", "should": true, "accept": ["technical-writing"], "q": "can you clean up the architecture overview in docs/architecture.md? it's gotten pretty rambly and half of it describes the old queue system we removed" },
+    { "id": "tw02", "should": true, "accept": ["technical-writing"], "q": "write up how the sync pipeline works for the new guy, doesn't have to be long" },
+    { "id": "tw03", "should": true, "accept": ["technical-writing"], "q": "de README van m'n repo is een zooitje, kun je m herschrijven" },
+    { "id": "tw04", "should": true, "accept": ["technical-writing", "writing-design-docs", "recording-decisions"], "q": "draft a short doc explaining why we cap retries at 3, people keep asking" },
+    { "id": "tw05", "should": true, "accept": ["technical-writing", "writing-runbooks"], "q": "the wiki page about our deploy process is outdated since we moved to tags, fix it up" },
+    { "id": "tw06", "should": true, "accept": ["technical-writing"], "q": "add a section to CONTRIBUTING.md about how we name branches" },
+    { "id": "tw07", "should": true, "accept": ["technical-writing"], "q": "turn these bullet points into a proper explanation for the docs folder: cache warms on boot, misses fall through to s3, ttl is an hour" },
+    { "id": "tw08", "should": false, "q": "write punchy homepage copy for our new landing page, we sell invoicing software for plumbers" },
+    { "id": "tw09", "should": false, "q": "fix the typo in the error message string in checkout.ts line 88" },
+    { "id": "tw10", "should": false, "q": "what's the difference between REST and GraphQL?" },
+    { "id": "tw11", "should": false, "q": "summarize this slack thread for me real quick" },
+    { "id": "tw12", "should": false, "q": "proofread my linkedin post about our product launch" },
+    { "id": "rp01", "should": true, "accept": ["reviewing-technical-prose"], "q": "does this design doc read ok? something feels off about the tone but i can't pin it down" },
+    { "id": "rp02", "should": true, "accept": ["reviewing-technical-prose"], "q": "my coworker wrote this runbook, can you review it before we publish it" },
+    { "id": "rp03", "should": true, "accept": ["reviewing-technical-prose"], "q": "this doc my teammate drafted sounds super AI-generated, can you fix that without changing what it says" },
+    { "id": "rp04", "should": true, "accept": ["reviewing-technical-prose"], "q": "check de samenvatting van dit voorstel even voor ik hem naar de PO stuur" },
+    { "id": "rp05", "should": true, "accept": ["reviewing-technical-prose"], "q": "here's the README before I push, last look?" },
+    { "id": "rp06", "should": true, "accept": ["reviewing-technical-prose", "writing-postmortems"], "q": "someone said my postmortem reads like marketing, review it" },
+    { "id": "rp07", "should": true, "accept": ["reviewing-technical-prose"], "q": "make this migration guide sound less like a language model wrote it" },
+    { "id": "rp08", "should": false, "q": "review this PR for bugs please" },
+    { "id": "rp09", "should": false, "q": "can you review my resume for a job application" },
+    { "id": "rp10", "should": false, "q": "review whether this diff has enough test coverage" },
+    { "id": "rp11", "should": false, "q": "is this SQL query efficient or should I add an index" },
+    { "id": "rp12", "should": false, "q": "review my ad copy variations for the google campaign" }
+  ]
+}

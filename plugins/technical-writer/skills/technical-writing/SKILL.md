@@ -1,6 +1,6 @@
 ---
 name: technical-writing
-description: Use when writing, restructuring, or revising any technical document - specs, design docs, READMEs, reference documentation, plans, reports - or any prose that must survive being read twice by someone in a hurry. Encodes the house style, the truth and sourcing rules, and the banned-constructions list. Use whenever repository-bound text longer than a paragraph is being produced, even if nobody says "document". Foundation for the sibling document-type skills.
+description: Use when writing, restructuring, or revising any technical document - specs, design docs, READMEs, reference documentation, plans, reports - or any prose that must survive being read twice by someone in a hurry. Encodes the house style, the truth and sourcing rules, and the banned-constructions list. Use whenever you produce repository-bound text longer than a paragraph, even if nobody says "document". Foundation for the sibling document-type skills.
 ---
 
 # Technical writing
