@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/riekelt/technical-writer/compare/v1.4.0...v1.4.1) (2026-08-21)
+
+
+### Bug Fixes
+
+* language-follow rule, author override, and rewrite-as-proposal ([b2c9e1c](https://github.com/riekelt/technical-writer/commit/b2c9e1c3513765bd0062e3320a2da9a73dc1414a))
+
 # [1.4.0](https://github.com/riekelt/technical-writer/compare/v1.3.0...v1.4.0) (2026-08-20)
 
 
