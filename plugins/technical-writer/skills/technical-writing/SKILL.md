@@ -7,7 +7,7 @@ description: Use when writing, restructuring, or revising any technical document
 
 ## Overview
 
-House style for English technical documents, composed from conventions proven across my repositories. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one, because the author is the one saying it out loud.
+House style for technical documents, written in English and composed from conventions used across my repositories. Documents keep their own language: a Dutch document is written and reviewed in Dutch. The structural and truth rules apply in any language; the vocabulary lists in `references/style.md` are English-specific and other languages carry their own. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one, because the author is the one saying it out loud.
 
 These rules govern documents, not chat replies. Length and section rules apply to running prose, not to reference lists like this file.
 
@@ -60,6 +60,8 @@ When instructions conflict, apply them in this order:
 5. Shared style preferences in `references/style.md`.
 
 Existing practice controls only choices that a higher rule does not settle. It cannot weaken sourcing, rewrite accepted history, or represent unverified work as shipped. A document-type exception must name the rule it bends and the boundary of the exception.
+
+An author's explicit, stated style choice outranks the shared style preferences and nothing else: when the author says leave my voice alone, the style pass stops, while truth, safety, and history stay binding whoever objects.
 
 ## Classify the document before editing it
 

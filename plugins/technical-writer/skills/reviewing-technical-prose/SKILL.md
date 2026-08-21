@@ -34,6 +34,8 @@ One requirement above all rules: **the content stays identical.** Work in this o
 
 Never add a fact to finish a sentence: ask the author or pick a simpler sentence. If a sentence stays wooden after two attempts, rewrite the whole paragraph around its main point. Change only running prose: code blocks, frontmatter, table data, and link targets stay as they are.
 
+Two more rules frame every rewrite. **The rewrite keeps the document's language**: a Dutch document comes back in Dutch, with the structural and truth rules applied as always and the English-specific vocabulary checks replaced by that language's own list where one exists. And **when the author is reachable, the diff is the proposal**: show the rewrite before overwriting their text; unattended in a repository, the commit is the proposal and review does the same job.
+
 When the source text asserts nothing recoverable (setups, glosses, meaning-sentences), the correct rewrite is deletion plus a marked gap (`**[input wanted: ...]**`) where a real claim should stand. A rewrite full of marked gaps is the intended outcome for claim-free source text, not a failure.
 
 ## What you do not flag

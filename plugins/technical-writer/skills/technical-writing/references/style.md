@@ -44,7 +44,7 @@ Banned: the heading that names the question instead of the content ("What tips t
 
 ## Banned constructions
 
-Each entry names the pattern; the quoted phrases are examples, and paraphrases of the pattern are equally banned.
+Each entry names the pattern; the quoted phrases are examples, and paraphrases of the pattern are equally banned. The patterns are language-agnostic; the vocabulary in the examples is English, and a document in another language gets the same patterns checked against that language's own vocabulary list where one exists.
 
 | Pattern | Example | Repair |
 |---|---|---|
