@@ -9,7 +9,7 @@ description: Use when reviewing, rewriting, or editing someone else's technical 
 
 ## Overview
 
-Editing is diagnosis, not a rewrite quota. Every edit names the concrete defect it fixes; the smallest edit that fixes it wins. Rewriting natural or approved language without a named defect is itself a defect.
+Editing is diagnosis. Every edit names the concrete defect it fixes; the smallest edit that fixes it wins. Rewriting natural or approved language without a named defect is itself a defect.
 
 Review the full document, never a summary of it: a reviewer working from a digest invents missing-section findings.
 
@@ -27,18 +27,25 @@ Invoke when reviewing or rewriting someone else's technical text, when producing
 
 One requirement above all rules: **the content stays identical.** Work in this order:
 
-1. Read the source and mark every banned construction and word-choice violation.
-2. Write a version and read it aloud.
-3. Ask three control questions: which sentence still sounds like a language model; did the rewrite add or drop a fact, number, date, name, source, or claim; and does the rewrite recreate a removed pattern in a new rhetorical form? Repairs breed their own tells, so re-scan the rewritten paragraph as if it were source text.
+1. Read the source. Mark every banned construction and word-choice violation.
+2. Write a version. Read it aloud.
+3. Ask three control questions:
+   - Which sentence still sounds like a language model?
+   - Did the rewrite add or drop a fact, number, date, name, source, or claim?
+   - Does the rewrite recreate a removed pattern in a new rhetorical form?
+
+   Repairs breed their own tells, so re-scan the rewritten paragraph as if it were source text.
+
 4. Repair what the control questions surface. An addition and a loss both count as errors, even when the text reads better for it.
 
 Never add a fact to finish a sentence: ask the author or pick a simpler sentence. If a sentence stays wooden after two attempts, rewrite the whole paragraph around its main point. Change only running prose: code blocks, frontmatter, table data, and link targets stay as they are.
 
-Two more rules frame every rewrite. **The rewrite keeps the document's language**: a Dutch document comes back in Dutch, with the structural and truth rules applied as always and the English-specific vocabulary checks replaced by that language's own list where one exists. And **when the author is reachable, the diff is the proposal**: show the rewrite before overwriting their text; unattended in a repository, the commit is the proposal and review does the same job.
+- **The rewrite keeps the document's language.** A Dutch document comes back in Dutch, with the structural and truth rules applied as always; the English-specific vocabulary checks are replaced by that language's own list where one exists.
+- **When the author is reachable, the diff is the proposal.** Show the rewrite before overwriting their text. Unattended in a repository, the commit is the proposal and review does the same job.
 
-When the source text asserts nothing recoverable (setups, glosses, meaning-sentences), the correct rewrite is deletion plus a marked gap (`**[input wanted: ...]**`) where a real claim should stand. A rewrite full of marked gaps is the intended outcome for claim-free source text, not a failure.
+When the source text asserts nothing recoverable (setups, glosses, meaning-sentences), the correct rewrite is deletion plus a marked gap (`**[input wanted: <the claim the sentence should make>]**`, the claim-level sibling of the core skill's `**[source wanted: ...]**`) where a real claim should stand. A rewrite full of marked gaps is the intended outcome for claim-free source text, not a failure.
 
-## What you do not flag
+## Findings to leave alone
 
 The banned-constructions list helps recognize machine text; it proves nothing by itself, and every pattern also occurs in good human writing. Flag only when several signs coincide in the same paragraph.
 
@@ -60,8 +67,8 @@ The banned-constructions list helps recognize machine text; it proves nothing by
 - Severity vocabulary defined in the report that uses it: **BLOCKER** (cannot proceed), **WARNING** (likely rework; fix but not blocking), **OBS** (worth noting).
 - Every finding: one sentence stating the defect, a location (`file:line`, section, task ID), a proposed fix, and a confidence level.
 - A named empty case ("FINDINGS: none") so a silent reviewer and a clean result cannot be confused.
-- A document claim contradicted by the code is a defect in the document; report it with the conflicting source. An unrelated bug you noticed in passing is not your finding: stay in scope, do not restyle, do not relitigate settled decisions.
-- Re-reviews list only what remains; resolved findings are not re-listed.
+- A document claim contradicted by the code is a defect in the document; report it with the conflicting source. An unrelated bug you noticed in passing is not your finding.
+- Re-reviews list only what remains.
 - Acknowledge what is good; a review that only objects is not calibrated.
 
 ## Delivery checklist
@@ -70,7 +77,7 @@ Before any document goes out:
 
 - [ ] **Matched** to the existing documents in the same directory, and added to the `README.md` index if one exists
 - [ ] **No em dashes, en dashes, or ` -- `**; no changelog section or "last updated" field; no ticket keys, phases, or SHAs in prose
-- [ ] **No banned constructions** (references/style.md); check at least the summary and the closing paragraphs
+- [ ] **No banned constructions** (the `technical-writing` skill's `references/style.md`); check at least the summary and the closing paragraphs
 - [ ] **Headings name the content**: no question forms, no "What X means", no heading repeated in its first sentence
 - [ ] **Conclusion first** at document, chapter, and paragraph level
 - [ ] **Procedures**: one action per sentence, with an actor

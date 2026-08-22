@@ -4,7 +4,7 @@
 
 Skills for writing technical documents in a strict house style: conclusion first, every claim traceable to a source, one fact in one home, and a banned-constructions list that catches machine text. Distilled from writing conventions used across my own repositories.
 
-One core skill holds the shared rules; six specialized skills build on it.
+One core skill holds the shared rules; seven specialized skills build on it.
 
 | Skill | Use when |
 |---|---|
@@ -30,12 +30,19 @@ The rules are house-composed, but most stand on named public constructs. What ea
 | [Google developer documentation style guide](https://developers.google.com/style/headings) | Heading types: noun phrases for concepts, task headings for procedures; sentence-case headings | `references/style.md` headings |
 | [digital.gov plain language](https://digital.gov/guides/plain-language/) | The case against question headings outside real FAQs | `references/style.md` headings |
 | [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and humanizer-style catalogs | The machine-tell inventory: negative parallelism, rule of three, importance announcements, cursed vocabulary | `references/style.md` banned constructions. Divergence: scoped to technical documents, coupled to review severities, and paired with a what-not-to-flag list to protect human text |
-| [Diátaxis](https://diataxis.fr/) | The insight that document types must not mix | The classification table in `technical-writing`. Divergence: our kinds are keyed to the edit rule (normative, descriptive, historical, runbook, reference), not to reader need |
+| [Diátaxis](https://diataxis.fr/) | The insight that document types must not mix | The classification table in `technical-writing`. Divergence: the kinds here are keyed to the edit rule (normative, descriptive, historical, runbook, reference), not to reader need |
 | BLUF (bottom line up front) | Conclusion first at every level | `technical-writing` workflow, the design-doc summary |
 | [Conventional Commits](https://www.conventionalcommits.org/) and [semantic-release](https://semantic-release.gitbook.io/) | Commit subjects as the changelog, automated versioning | The release pipeline of this repo |
 | [multi-agent-review](https://github.com/riekelt/multi-agent-review) | The plugin and marketplace repository structure, and the severity-tagged finding format with a named empty case | The repo layout, `reviewing-technical-prose` |
 
-The parts with no found prior art, per an August 2026 survey of public agent skills, style guides, and tooling: the per-kind edit semantics (never water a normative doc down to match violating code), claim provenance with confidence tiers, the staleness rules, one fact one home with "the source wins and the index is the bug", the rewrite rule that an added fact counts as an error like a lost one, and the remove-the-name test.
+No prior art turned up for these parts when I searched public agent skills, style guides, and tooling in August 2026:
+
+- the per-kind edit semantics (never water a normative doc down to match violating code)
+- claim provenance with confidence tiers
+- the staleness rules
+- one fact one home, with "the source wins and the index is the bug"
+- the rewrite rule that an added fact counts as an error like a lost one
+- the remove-the-name test
 
 ## Install
 
@@ -54,11 +61,12 @@ Other agents: point the platform's plugin loader at `plugins/technical-writer/`,
 .claude-plugin/marketplace.json          # Claude Code marketplace manifest
 .agents/plugins/marketplace.json         # generic agents marketplace manifest
 .github/workflows/release.yml            # semantic-release on push to main
-.releaserc.json                          # release config; stamps versions into the plugin manifests
+.releaserc.json                          # release config; stamps versions into package.json and the plugin manifests
 plugins/technical-writer/
-  .claude-plugin/plugin.json             # per-platform plugin manifests
-  .codex-plugin/plugin.json
-  .cursor-plugin/plugin.json
+  .claude-plugin/plugin.json             # Claude Code plugin manifest
+  .codex-plugin/plugin.json              # Codex plugin manifest
+  .cursor-plugin/plugin.json             # Cursor plugin manifest
+  evals/                                 # skill trigger and behavior evals
   skills/
     technical-writing/                   # core: SKILL.md, references/style.md, references/truth.md
     writing-design-docs/
@@ -66,6 +74,7 @@ plugins/technical-writer/
     writing-changelogs/
     writing-runbooks/
     writing-issues/
+    writing-postmortems/
     reviewing-technical-prose/
 ```
 

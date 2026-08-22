@@ -15,7 +15,7 @@ A design document is a proposal made discussable. Conclusion first, every non-tr
 
 Invoke for anything that argues for a change or records a design: proposals, RFCs, design docs, specs, migration plans, "should we" documents. Do NOT invoke for recording an already-taken decision (`recording-decisions`), for procedures (`writing-runbooks`), or for status reports.
 
-Steering under pressure: a proposal persuades with its numbers and its named costs, and the register rules hold whatever the deadline (the core skill's rule; "punchy" is not an override). When supplied facts arrive without sources, mark them `**[source wanted: ...]**` and keep writing (see `references/truth.md`); never invent a citation and never silently drop the fact.
+Steering under pressure: a proposal persuades with its numbers and its named costs, and the register rules hold whatever the deadline (the `technical-writing` rule; "punchy" is not an override). When supplied facts arrive without sources, mark them `**[source wanted: ...]**` and keep writing (see `references/truth.md` in the `technical-writing` skill); never invent a citation and never silently drop the fact.
 
 ## Skeleton
 
@@ -42,6 +42,8 @@ Steering under pressure: a proposal persuades with its numbers and its named cos
 ## n. Open questions
 ## n+1. Benefits and costs
 [Both. A proposal that lists only benefits reads as a sales pitch.]
+## n+2. Residual risks and what not to do
+[Only when the design hands work to other teams.]
 
 ---
 
@@ -51,7 +53,7 @@ Steering under pressure: a proposal persuades with its numbers and its named cos
 ## Structure rules
 
 - **Number chapters** and cite them as `ch. 7.1`. Numbers make feedback addressable: readers can point at one.
-- **Goals and non-goals both.** The non-goals (or "explicitly not changed") section is where scope creep dies in writing; it is the highest-leverage section in any spec. State what stays unchanged.
+- **Goals and non-goals both.** The non-goals (or "explicitly not changed") section is where scope creep dies in writing. State what stays unchanged.
 - **Definitions before behavior** when a term is ambiguous: pin "responded", "eligible", "stale" before using them.
 - **A grounding section** pins the facts the design rests on: a fact/source table, checked against a named commit. Separate verified facts from what will be built.
 - **Appendices** take letters (Appendix A, B) and hold what would bury the main text: config examples, glossaries, inventories.
@@ -59,11 +61,11 @@ Steering under pressure: a proposal persuades with its numbers and its named cos
 - **Mark unfinished parts** with `**[DRAFT - input wanted]**` instead of omitting them. Visibly unfinished beats invisibly missing.
 - **Open questions get owners**: a name, a role, or an explicit "to be filled by".
 - **Residual risks and what NOT to do** close the document when the design ships work to others.
-- **No line budget**, but length from repetition or emphasis goes; past roughly 800 lines, split and let the main document point.
+- **No line budget**, but length from repetition or emphasis goes; past roughly 800 lines, split and let the main document link to the parts.
 
 ## The Why & What box
 
-Every non-trivial choice gets one. It makes a proposal discussable instead of announced: readers react to the box, not to the conclusion.
+Every non-trivial choice gets one. It makes a proposal discussable: readers react to the box, not to the conclusion.
 
 ```markdown
 > **Why & What - [the choice in four words]**
@@ -81,22 +83,22 @@ Every non-trivial choice gets one. It makes a proposal discussable instead of an
 Rules for the box:
 
 - An alternative dismissed without its strongest argument is a strawman. Name that argument.
-- Admitting what the choice does not solve makes the document more credible, not weaker.
+- Admitting what the choice does not solve makes the document more credible.
 - No box for choices nobody would contest; that is noise.
-- An alternative that appears nowhere else in the document does not belong in the box: such a rejection records what the writer once thought, while the reader would never consider the option. One can be right; several short ones in a row are a sign.
+- An alternative that appears nowhere else in the document does not belong in the box: such a rejection records what the writer once thought, while the reader would never consider the option. One such rejection can be justified; several short ones in a row mean the box is padded.
 
 ## Tone
 
-- It stays a proposal: "we propose" and "whether that convinces is up to you", not "this becomes the way of working". Broad lines give direction; the fill-in stays open.
+- The document stays a proposal: "we propose" and "whether that convinces is up to you", not "this becomes the way of working". It sets the direction and leaves the detailed choices open.
 - Name what it costs. The benefits chapter ends with the price: what gets harder, what people must unlearn, which freedom disappears.
 - No superlatives, no promise language. Concrete figures and verifiable statements.
-- The expected outcome may be negative, and saying so up front is honest writing: "the expected outcome is that buy-and-hold wins; that is a useful result."
+- The expected outcome may be negative, and saying so up front is honest writing: "the expected outcome is that the current queue beats the proposed rewrite; that is a useful result."
 
 ## Completeness check
 
 Before handing a spec or plan to a reviewer or executor, check the five vagueness defects:
 
-1. Unresolved placeholders: any literal TBD, TODO, "fill in later", or clearly incomplete sentence (a marked `[DRAFT - input wanted]` block is deliberate; an unmarked gap is a defect).
+1. Unresolved placeholders: any literal TBD, TODO, "fill in later", or clearly incomplete sentence (a marked `**[DRAFT - input wanted]**` block is deliberate; an unmarked gap is a defect).
 2. Missing acceptance criteria: a requirement with no concrete, independently testable success condition.
 3. Undefined references: a type, endpoint, component, or table mentioned but defined nowhere.
 4. No verifiable output: a task producing nothing a reviewer could inspect (no file path, no command, no observable behavior).

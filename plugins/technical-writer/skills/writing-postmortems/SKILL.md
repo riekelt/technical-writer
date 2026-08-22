@@ -13,7 +13,7 @@ A postmortem is written for the engineer who hits something similar in a year, n
 
 ## When to invoke, and not
 
-Invoke after an incident is resolved (or at a stable milestone of a long one), after a defect that reached users, and after a near miss: a guard that caught what review missed is the cheapest lesson available and earns the same write-up. Do NOT invoke during the live incident (the runbook governs that), for assigning accountability (a postmortem that needs a person's name to make sense is describing a process hole), or for a status update to stakeholders (that is a report, not a postmortem).
+Invoke after an incident is resolved, or at a stable milestone of a long one. A defect that reached users and a near miss, where a guard caught what review missed, earn the same write-up. Do NOT invoke during the live incident: the runbook governs that. Do not invoke for assigning accountability, since a postmortem that needs a person's name to make sense is describing a process hole. And not for a status update to stakeholders, which is a report.
 
 ## Skeleton
 
@@ -46,23 +46,26 @@ real incidents rarely have one cause, and "every component was correct and the
 defect lived between them" is a valid root cause. Name which layer of checking
 missed it and which caught it.]
 
-## What we got wrong during response
+## Wrong turns during the response
 [The wrong first fix, the misleading signal followed, the theory that cost an hour.
 Recording the plausible-but-wrong path is what saves the next responder from it.]
 
 ## Action items
 [Each with an owner and an acceptance check, filed as tracker issues and linked.
 "Investigate X" without an owner is banned here as everywhere.]
+
+## Sign-off
+[- YYYY-MM-DD <reviewer>: approved <scope>, one line per review event.]
 ```
 
 ## Rules
 
-- **Blameless means structural.** Name the role, the gate, the dependency, the missing guard; never the person. This is not politeness: a postmortem blaming a person stops at "be more careful", and one blaming a structure produces an action item. The rule governs the narrative (timeline, causes, response); action-item ownership is assignment, not blame: a role in this document, an individual in the linked tracker issue.
+- **Blameless means structural.** Name the role, the gate, the dependency, the missing guard; never the person. A postmortem blaming a person stops at "be more careful", and one blaming a structure produces an action item. The rule governs the narrative (timeline, causes, response); action-item ownership is assignment, not blame: a role in this document, an individual in the linked tracker issue.
 - **The timeline is evidence, not narrative.** Every entry traces to something checkable, timestamps from the systems rather than memory. Where memory is the only source, say so.
 - **Wrong fixes are content.** The fix that made sense and did not work belongs in the document with the reasoning that made it plausible; embarrassment is not a retention policy.
-- **Severity comes from the org taxonomy** and is defined where used, not assumed. No taxonomy available: leave the field explicitly unassigned rather than inventing one.
+- **Severity comes from the org taxonomy** and is defined where used, not assumed. When no taxonomy exists, leave the field explicitly unassigned rather than inventing one.
 - **Action items follow `writing-issues`**: outcome, owner, acceptance check, filed and linked, never left as prose intentions in the postmortem. When filing is not possible from where you sit, mark each item `[to file: <who files it>]`; the postmortem stays Draft until the links exist.
 - **Immutable once reviewed.** New findings are dated addenda; a rewritten postmortem is a falsified record. The review itself goes in a sign-off line (see `references/truth.md` in the core skill).
 - **Near misses use the same skeleton** with Impact describing what would have happened, labeled as the counterfactual it is.
 
-The decision that often follows a postmortem (a new invariant, a policy change) is recorded via `recording-decisions` and linked, not embedded. The runbook updates the incident exposed go through `writing-runbooks` in the same change, per the docs-update-with-the-change rule.
+The decision that often follows a postmortem (a new invariant, a policy change) is recorded via `recording-decisions` and linked, not embedded. Runbook updates that the incident exposed go through `writing-runbooks` in the same change as the fix, because documentation is part of done rather than a follow-up ticket.

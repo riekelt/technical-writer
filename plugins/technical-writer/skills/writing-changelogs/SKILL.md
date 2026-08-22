@@ -9,20 +9,22 @@ description: Use when writing a changelog entry, release notes, or a "what shipp
 
 ## Overview
 
-The changelog is the one place where describing the change, not the current state, is the job. It is historical: entries are never rewritten, only appended.
+The changelog is one of the few document types where the change, not the current state, is the subject; migration docs and release notes are the others. It is historical: entries are never rewritten, only appended.
 
 ## When to invoke, and not
 
-Invoke after shipping a meaningful change (a feature, a fix of real size, a removal), when writing release notes, or when summarizing what shipped. Do NOT invoke for trivial edits (a threshold of roughly three changed files or commits keeps the log meaningful), and never rewrite or delete existing entries: the changelog is historical by classification.
+Invoke after shipping a meaningful change (a feature, a fix of real size, a removal), when writing release notes, or when summarizing what shipped. Do NOT invoke for trivial edits (roughly three changed files, or three commits), and never rewrite or delete existing entries.
 
 ## Rules
 
-- One entry per shipped change, newest first, ISO dates, grouped by version where versions exist. Strict, not marketing.
+- One entry per shipped change, newest first, ISO dates, grouped by version where versions exist.
 - Standard categories where the file uses them: Added / Changed / Deprecated / Fixed / Removed / Security. A Deprecated entry carries the removal date and the replacement.
 - **Breaking changes lead the entry**, above the categories, each with the required migration action stated (and the migration guide linked when one exists). A breaking change buried under Added is the entry the reader needed most and found last.
-- User-visible impact over implementation detail; present tense, active voice; no jargon the reader would not know; group related changes; never duplicate an existing entry.
+- User-visible impact over implementation detail.
+- Present tense, active voice, and no jargon the reader would not know.
+- Group related changes, and never duplicate an existing entry.
 - Record removals, not just additions: readers chase dead concepts otherwise.
-- Release notes are the audience-facing cut of the same facts: what changed, who it affects, what to do about it. The changelog speaks to engineers; release notes to users of the system. Same sources, different register, never contradicting each other.
+- Release notes are the audience-facing cut of the same facts: what changed, who it affects, what to do about it. The changelog speaks to engineers; release notes to users of the system. Both draw on the same sources and must never contradict each other.
 
 ## Entry shape
 
@@ -37,21 +39,21 @@ Invoke after shipping a meaningful change (a feature, a fix of real size, a remo
   branch.
 ```
 
-Fixed entries explain the failure mode, not the diff. A "why it matters" clause turns a change list into something a reader can triage.
+Fixed entries explain the failure mode, not the diff. The bold lead carries the user impact, which is what lets a reader triage a change list.
 
 ## Honesty conventions
 
-The entries almost nobody writes, and the reason a changelog becomes citable:
+Three entry types make a changelog citable:
 
 - **Known issues** surfaced but not fixed in this change, named as such.
 - **Deferred items** still owed ("one deploy needed to restore the webhook key").
 - **Deliberate omissions**, described by category, so the same omission is not re-litigated or mistaken for an oversight.
 
-Never mark anything shipped, deployed, or verified unless that exact action was completed and checked. Distinguish implemented (in the repo) from deployed (live) from externally verified.
+Never mark anything implemented, deployed, or verified unless that exact action was completed and checked. Distinguish implemented (in the repo) from deployed (live) from externally verified.
 
 ## Handover / completion summary
 
-For handing finished work to a reviewer or operator, the sections most handovers lack and readers most need:
+For handing finished work to a reviewer or operator, cover these sections in order:
 
 1. Why this work exists
 2. What shipped

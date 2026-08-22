@@ -13,11 +13,11 @@ Two formats, by weight. A full ADR for a decision with architecture-level conseq
 
 ## When to invoke, and not
 
-Invoke when a choice has been made and needs recording, when someone asks "write down why we did this", or when an existing decision is superseded. Do NOT invoke for a decision still being argued (that is `writing-design-docs`; the Why & What box becomes the ADR once accepted), and never edit an accepted ADR or an existing log entry: supersede it.
+Invoke when a choice has been made and needs recording, when someone asks "write down why we did this", or when an existing decision is superseded. Do NOT invoke for a decision still being argued (that is `writing-design-docs`; the Why & What box becomes the ADR once accepted).
 
-Also invoke on the phrases that signal an unrecorded decision passing by: "we decided X instead of Y", "let's just go with", a trade-off resolved in a PR comment or chat thread, or a rationale someone has now explained twice. Each of those is a decision living in a non-durable place; offer to record it.
+Also invoke on the signals that an unrecorded decision is passing by: "we decided X instead of Y", "let's just go with", a trade-off resolved in a PR comment or chat thread, or a rationale someone has now explained twice. Each of those is a decision living in a non-durable place; offer to record it.
 
-Record the decision before citing it. A chat session is not a durable source: put the dated substance in the log, quote the decider where wording matters, and commit it first. Record the smallest complete decision, not a transcript.
+Record the decision before citing it. A chat session is not a durable source. Put the dated substance in the log and quote the decider where wording matters, then commit the entry before citing it. Record the smallest complete decision, not a transcript.
 
 ## ADR
 
@@ -53,11 +53,11 @@ Factual, without giving away the decision.]
 
 **Negative is mandatory and may not be empty.** A decision without downsides is a decision that was not thought through. Each alternative carries its strongest argument for; a rejection without it is a strawman.
 
-Three edge rules the format implies but deserves stated: the sole permitted edit to an accepted ADR is its Status line gaining "Superseded by ADR-X"; an objection that was raised but never answered is recorded at full strength as a negative consequence with an owner, never given an invented rebuttal, and never a reason to withhold recording a decision its owner has declared; and names unknown at writing time are marked fill-before-filing, because a filed record carries real people.
+The format implies three edge rules worth stating. The sole permitted edit to an accepted ADR is its Status line gaining "Superseded by ADR-XXX". An objection raised but never answered goes in at full strength as a negative consequence with a named owner: the writer never invents a rebuttal and never withholds a decision its owner has declared. Names unknown at writing time are marked fill-before-filing, because a filed record carries real people.
 
 ## Decision log (lightweight)
 
-For the running log a full ADR would kill. Cheap enough to actually maintain:
+For the running log a full ADR would kill. Cheap enough to maintain:
 
 ```markdown
 ## YYYY-MM-DD
@@ -67,14 +67,15 @@ For the running log a full ADR would kill. Cheap enough to actually maintain:
 Why:
 - [reason]
 - [reason]
+Instead of: [rejected option] - [why not]
 ```
 
-The decision-as-title reads in a table of contents. Recording the rejected option and the reason is what makes the entry worth revisiting.
+The decision-as-title reads well in a table of contents. Recording the rejected option and the reason is what makes the entry worth revisiting.
 
 ## Rules
 
 - Append-only. A wrong entry gets a new dated entry that supersedes it, never an edit. Convert relative dates to absolute.
 - Record the why, not only the what. Rationale is the part git history cannot reconstruct.
-- When a written rule and shipped reality have diverged, record which was intended; an unowned topic is how the wrong document gets cited as authority. Every doctrine document states what it owns and what it does not govern.
+- When a written rule and shipped reality have diverged, record which one the team intended. An unowned topic is how the wrong document gets cited as authority: every doctrine document states what it owns and what it leaves to others.
 - Scope guard at the top when a sibling could overlap: "product ideas live in ROADMAP.md; this file is for engineering decisions."
 - Capture negative results and unknowns explicitly: "four theories, four disproved, cause not found" is a result. A search returning nothing is a result.

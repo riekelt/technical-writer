@@ -7,7 +7,7 @@ description: Use when writing, restructuring, or revising any technical document
 
 ## Overview
 
-House style for technical documents, written in English and composed from conventions used across my repositories. Documents keep their own language: a Dutch document is written and reviewed in Dutch. The structural and truth rules apply in any language; the vocabulary lists in `references/style.md` are English-specific and other languages carry their own. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one, because the author is the one saying it out loud.
+House style for technical documents, composed from conventions used across my repositories. The rules themselves are in English; documents keep their own language: a Dutch document is written and reviewed in Dutch. The structural and truth rules apply in any language; the vocabulary lists in `references/style.md` are English-specific and other languages carry their own. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one, because the author is the one saying it out loud.
 
 These rules govern documents, not chat replies. Length and section rules apply to running prose, not to reference lists like this file.
 
@@ -26,12 +26,12 @@ Load this skill for any technical prose, then the matching document-type skill o
 | A postmortem, incident report, root-cause analysis | `writing-postmortems` |
 | Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
 
-## What this skill does not do
+## Non-goals
 
 - It does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `references/truth.md` still bind those.
 - It does not decide content: what is true comes from the sources, not from the style.
 - It does not license restyling existing documents that follow their own conventions; apply the precedence rules below.
-- A request to make a document "punchy", "compelling", or "persuasive" does not override it: the numbers persuade, the register stays plain.
+- It does not yield to a request to make a document "punchy", "compelling", or "persuasive": the numbers persuade, the register stays plain.
 
 ## Mandatory checkpoint before drafting
 
@@ -43,7 +43,7 @@ Fill the fields from the request, sources, and repository context. State a safe 
 
 ## Read first, then write
 
-The most important step and the one most often skipped. Before writing a line:
+Before writing a line:
 
 1. Read up to two comparable documents in the same directory. Adopt their structure, tone, and conventions. When fewer than two comparable documents exist, read every available example and then use repository-level conventions. Do not block because the directory is new.
 2. Check for a `README.md` that indexes the documents. If it exists, add the new document to it.
@@ -61,7 +61,7 @@ When instructions conflict, apply them in this order:
 
 Existing practice controls only choices that a higher rule does not settle. It cannot weaken sourcing, rewrite accepted history, or represent unverified work as shipped. A document-type exception must name the rule it bends and the boundary of the exception.
 
-An author's explicit, stated style choice outranks the shared style preferences and nothing else: when the author says leave my voice alone, the style pass stops, while truth, safety, and history stay binding whoever objects.
+An author's stated style choice outranks the shared style preferences, and nothing else. When the author says leave my voice alone, the style pass stops; truth, safety, and history stay binding whoever objects.
 
 ## Classify the document before editing it
 
@@ -81,7 +81,7 @@ If an entire document describes something deleted, do not delete the file: mark 
 
 Non-negotiable, in every document:
 
-- **No em dashes, no en dashes, no ` -- ` dashes.** Use commas, colons, semicolons, periods, parentheses, or ` - ` with spaces as an aside marker. A plain hyphen serves ranges (`2026-2030`). Check all four forms before delivery.
+- **No em dashes, no en dashes, no ` -- ` dashes.** Use commas, colons, semicolons, periods, parentheses, or ` - ` with spaces as an aside marker. A plain hyphen serves ranges (`2026-2030`). Check all three forms before delivery.
 - **No changelog section and no "last updated" field inside a document.** Git history is the history. This holds per sentence too: describe current behavior, never the previous behavior ("this step replaced the manual check" belongs in a migration doc or release note, not in a procedure).
 - **No delivery history as narrative status in prose, comments, names, or strings**: no phases, task IDs, ticket keys, SHAs, or plan references that merely describe how work was delivered. A pinned commit may appear solely as claim evidence. Ticket keys may appear as functional metadata in tracker records, commit messages, planning documents, and citations; never in code comments or user-facing content.
 - **Never state as fact what you cannot trace** to code at a cited path, a pinned commit, a test, a document, or a primary source. A plausible guess presented as fact is worse than "the source says nothing about this." See `references/truth.md`.
@@ -92,7 +92,7 @@ Non-negotiable, in every document:
 ## Workflow
 
 1. **Read first** (above), and classify the document.
-2. **Declare before drafting**: audience, purpose, scope, and what the document deliberately does not cover. Infer these from the request and repository, state safe assumptions, and ask only when an unknown would materially change the result.
+2. **Declare before drafting**: fill the checkpoint above (kind, audience, purpose, non-goals).
 3. **Draft conclusion-first** at every level: document, chapter, paragraph. No run-up, no context paragraphs before the outcome. Each chapter opens with what came out of it, not how it was approached.
 4. **Ground every claim** and label its confidence: `references/truth.md`.
 5. **Style pass** over sentences, words, headings, and the banned-constructions list: `references/style.md`.
@@ -106,7 +106,7 @@ The same subject needs a different cut per reader. Know who you write for before
 |---|---|
 | Developers | The why behind the choice, and what changes about their work tomorrow |
 | Tech leads / architects | Trade-offs, alternatives, long-term consequences |
-| Management / PO | What it yields, what it costs, which risks |
+| Management / product owner | What it yields, what it costs, which risks |
 | External parties | No internal team names or jargon without explanation |
 
 Writing for several groups at once: the summary reads for the broadest group, the rest may deepen. If a phrase would need a footnote, it needs rewriting rather than a footnote.
@@ -120,4 +120,4 @@ Writing for several groups at once: the summary reads for the broadest group, th
 - Vague owners: "this still needs investigation" without a name or role.
 - Listing only benefits. Every proposal names its costs.
 - Silently trimming, reordering for emphasis, or restyling a host document during an edit pass. Edits are surgical: preserve voice, structure, numbering, and IDs.
-- A document that grows past roughly 800 lines of prose while nobody looks: split it and let the main document point.
+- A document that grows past roughly 800 lines of prose while nobody looks: split it and let the main document link to the parts.

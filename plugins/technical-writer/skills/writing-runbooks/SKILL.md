@@ -11,7 +11,7 @@ description: Use when writing operational documentation - runbooks, setup guides
 
 A runbook is read by someone in a hurry, often mid-incident. Every rule here serves that reader: order, one action per step, copy-pasteable commands, and danger marked where the eye already is.
 
-Write from a real run: every step one actually taken, every failure named one that actually happened. A procedure imagined at the desk is a draft, not a runbook. Partially exercised procedures publish with per-branch honesty: the runbook states which variant has not run yet and marks that branch draft, asking its first real runner to report back; a procedure with no real run behind any branch is a draft outright. When a value the commands need is genuinely unknown, the placeholder stays visibly bracketed rather than invented, and gets filled from a real run before publishing; truth outranks paste-readiness.
+Write from a real run: every step one actually taken, every failure named one that actually happened. A procedure imagined at the desk is a draft, not a runbook. Publish a partially exercised procedure with per-branch honesty: the runbook names the variant that has not run yet, marks that branch draft, and asks its first real runner to report back. A procedure with no real run behind any branch is a draft outright. When a value the commands need is genuinely unknown, the placeholder stays visibly bracketed rather than invented, and gets filled from a real run before publishing; truth outranks paste-readiness.
 
 ## When to invoke, and not
 
@@ -25,7 +25,7 @@ Invoke for anything a person will execute: runbooks, setup and release procedure
 - **TL;DR happy path first**, then the same steps broken out as numbered sections for when the reader needs only one.
 - Version-pinned prerequisites before any command, each with a check command to confirm it.
 - Numbered ordinal steps (not bullets), one action each, present tense or imperative, with a visible actor.
-- Every command copy-pasteable as-is, with concrete placeholder values ("common paths: `/public_html/`, `/www/`"). Label variants inside the code block:
+- Every command copy-pasteable as-is, with concrete example values ("common paths: `/public_html/`, `/www/`"). Label variants inside the code block:
 
 ```bash
 # safe mode
@@ -36,7 +36,7 @@ app sync run --live --approval-token=...
 ```
 
 - Ordered steps state the consequence of wrong ordering inline: "deploy jar, then DB cleanup; wrong order = silent data loss."
-- Every state-changing procedure names its rollback, or states plainly that none exists and what that means. A missing undo path is a finding, not an omission the reader discovers mid-incident.
+- Every state-changing procedure names its rollback, or states plainly that none exists and what that means.
 - End with a "verify it worked" section: the observable end state and the command that proves it.
 - Mark the preferred path "(recommended)" when several paths exist; document UI and CLI for the same task side by side rather than twice.
 - If the runbook will shrink when tooling lands, say so: "when X lands, steps 2 to 4 become one command and this document keeps only the judgment."
@@ -56,13 +56,13 @@ Order diagnostic steps cheapest first. Group entries by failure class. Cross-lin
 
 ## Migration and deprecation guides
 
-A migration guide is a runbook whose subject is the change itself. Everything above applies, plus five rules of its own. The surrounding documents are handled by their own skills: the argument for the migration is a design doc, the decision to deprecate is an ADR, the announcement is a changelog entry; this section is the guide the reader executes.
+A migration guide is a runbook whose subject is the change itself. Everything above applies, plus five rules of its own. Each surrounding document has its own skill: the argument for the migration is a design doc (`writing-design-docs`), the decision to deprecate is an ADR (`recording-decisions`), the announcement is a changelog entry (`writing-changelogs`). This section covers the guide the reader executes.
 
 1. **History is the content here, stated positively.** The before/after comparison is the job, not a violation: this is the document class the no-history hard rule explicitly carves out. Write "the tag now replaces the manual version bump" freely; that sentence is banned everywhere else and load-bearing here.
 2. **The mapping table is the core artifact.** Readers arrive knowing the old world; give them old → new per behavior, config key, command, or API, one row each. Prose explains the rows that need it; the table carries the migration.
 3. **Rollback is mandatory, per step.** Every step names its undo, or states plainly that it is irreversible and what that means for the ordering around it. A migration guide without rollback paths is a proposal to strand people mid-migration.
-4. **The deprecation contract carries dates.** What stops working, on which date, what happens to stragglers, and where the escape hatch is until then. "Will be removed in a future release" is a banned vague owner wearing a calendar.
-5. **Born with an expiry.** A migration guide is temporary by design: when the migration completes, it reclassifies as historical and gets the superseded banner pointing at the current-state documentation, never silent deletion. State the completion condition in the guide itself.
+4. **The deprecation contract carries dates.** What stops working, on which date, what happens to stragglers, and where the escape hatch is until then. "Will be removed in a future release" names no date and is banned here.
+5. **Born with an expiry.** A migration guide is temporary by design: when the migration completes, the owner reclassifies it as historical and adds the superseded banner pointing at the current-state documentation, never deleting it silently. State the completion condition in the guide itself.
 
 ## Operator-facing strings
 
