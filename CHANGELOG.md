@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/riekelt/technical-writer/compare/v1.5.1...v1.6.0) (2026-08-22)
+
+
+### Features
+
+* documenting legacy codebases, with the evidence to back it ([9d01c60](https://github.com/riekelt/technical-writer/commit/9d01c60be8f35b9e9841c0568df542c4a269abc9))
+
 ## [1.5.1](https://github.com/riekelt/technical-writer/compare/v1.5.0...v1.5.1) (2026-08-22)
 
 
