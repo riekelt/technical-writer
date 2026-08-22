@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/riekelt/technical-writer/compare/v1.5.0...v1.5.1) (2026-08-22)
+
+
+### Bug Fixes
+
+* the rulebook passes its own review ([9eea453](https://github.com/riekelt/technical-writer/commit/9eea453bc9ea240840af06b503f2db75f6883e61))
+
 # [1.5.0](https://github.com/riekelt/technical-writer/compare/v1.4.1...v1.5.0) (2026-08-22)
 
 
