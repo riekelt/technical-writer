@@ -24,6 +24,7 @@ Load this skill for any technical prose, then the matching document-type skill o
 | A tracker item: epic, story, task, bug report, spike, acceptance criteria | `writing-issues` |
 | A migration or deprecation guide | `writing-runbooks` |
 | A postmortem, incident report, root-cause analysis | `writing-postmortems` |
+| Documenting an existing, under-documented system; regrounding stale docs against code | `documenting-legacy-codebases` |
 | Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
 
 ## Non-goals

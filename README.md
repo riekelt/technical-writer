@@ -4,7 +4,7 @@
 
 Skills for writing technical documents in a strict house style: conclusion first, every claim traceable to a source, one fact in one home, and a banned-constructions list that catches machine text. Distilled from writing conventions used across my own repositories.
 
-One core skill holds the shared rules; seven specialized skills build on it.
+One core skill holds the shared rules; eight specialized skills build on it.
 
 | Skill | Use when |
 |---|---|
@@ -15,6 +15,7 @@ One core skill holds the shared rules; seven specialized skills build on it.
 | [writing-runbooks](plugins/technical-writer/skills/writing-runbooks/SKILL.md) | Runbooks, setup guides, troubleshooting, procedures. |
 | [writing-issues](plugins/technical-writer/skills/writing-issues/SKILL.md) | Tracker items: epics, stories, tasks, bug reports, spikes, acceptance criteria. |
 | [writing-postmortems](plugins/technical-writer/skills/writing-postmortems/SKILL.md) | Postmortems, incident reports, root-cause analyses, near misses. |
+| [documenting-legacy-codebases](plugins/technical-writer/skills/documenting-legacy-codebases/SKILL.md) | Documenting inherited or under-documented systems: survey-first inventory, evidence hierarchy, dead-or-alive proofs, findings register, coverage ledger, and the parallel grounding campaign. |
 | [reviewing-technical-prose](plugins/technical-writer/skills/reviewing-technical-prose/SKILL.md) | Reviewing or rewriting someone else's text; severity mapping; the delivery checklist. |
 
 ## Influences and prior art
@@ -75,6 +76,7 @@ plugins/technical-writer/
     writing-runbooks/
     writing-issues/
     writing-postmortems/
+    documenting-legacy-codebases/
     reviewing-technical-prose/
 ```
 
