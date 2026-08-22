@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/riekelt/technical-writer/compare/v1.4.1...v1.5.0) (2026-08-22)
+
+
+### Features
+
+* production residue, decision edge cases, and runbook verification honesty ([d4eec0e](https://github.com/riekelt/technical-writer/commit/d4eec0e450755f099c187c897327754fe7789bc2))
+
 ## [1.4.1](https://github.com/riekelt/technical-writer/compare/v1.4.0...v1.4.1) (2026-08-21)
 
 
