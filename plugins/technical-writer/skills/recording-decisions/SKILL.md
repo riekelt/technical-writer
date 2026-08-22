@@ -53,6 +53,8 @@ Factual, without giving away the decision.]
 
 **Negative is mandatory and may not be empty.** A decision without downsides is a decision that was not thought through. Each alternative carries its strongest argument for; a rejection without it is a strawman.
 
+Three edge rules the format implies but deserves stated: the sole permitted edit to an accepted ADR is its Status line gaining "Superseded by ADR-X"; an objection that was raised but never answered is recorded at full strength as a negative consequence with an owner, never given an invented rebuttal, and never a reason to withhold recording a decision its owner has declared; and names unknown at writing time are marked fill-before-filing, because a filed record carries real people.
+
 ## Decision log (lightweight)
 
 For the running log a full ADR would kill. Cheap enough to actually maintain:

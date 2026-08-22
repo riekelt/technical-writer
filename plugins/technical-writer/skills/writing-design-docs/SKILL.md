@@ -15,7 +15,7 @@ A design document is a proposal made discussable. Conclusion first, every non-tr
 
 Invoke for anything that argues for a change or records a design: proposals, RFCs, design docs, specs, migration plans, "should we" documents. Do NOT invoke for recording an already-taken decision (`recording-decisions`), for procedures (`writing-runbooks`), or for status reports.
 
-Steering under pressure: "management wants it punchy", "sell it", and deadlines do not relax the tone rules. A proposal persuades with its numbers and its named costs; the moment it reads as a pitch, it loses the reader this skill writes for. When supplied facts arrive without sources, mark them `**[source wanted: ...]**` and keep writing (see `references/truth.md`); never invent a citation and never silently drop the fact.
+Steering under pressure: a proposal persuades with its numbers and its named costs, and the register rules hold whatever the deadline (the core skill's rule; "punchy" is not an override). When supplied facts arrive without sources, mark them `**[source wanted: ...]**` and keep writing (see `references/truth.md`); never invent a citation and never silently drop the fact.
 
 ## Skeleton
 

@@ -71,6 +71,8 @@ Each entry names the pattern; the quoted phrases are examples, and paraphrases o
 | Bold-lead bullets | "**Performance:** the system..." repeated down a list | If bullets need headings, they are subsections; a list needs parallel items |
 | Emoji furniture | emoji as bullets, prefixes, or category markers | Plain markers |
 | Assistant residue | "Here is an overview", "I hope this helps", "Great question", reasoning traces, placeholder text, leaked citation markers | Delete; never ship correspondence as prose |
+| Production residue | "as requested", "per the instructions", "unlike the previous version", "this guide deliberately avoids X", "this section was added because" | A constraint shapes the design and stays invisible: the document that must not use a tool simply shows the other way; exclusions are stated only when the audience needs them |
+| Leaked intent example | an example the requester gave to communicate intent, appearing as content in the deliverable | Requester examples are diagnostic material: read the audience and abstraction level from them, then let the document carry its own examples |
 | Closing offer | ending a document with a question or an offer to the reader | Documents end on content (fine in chat, one line max) |
 
 ## Formatting

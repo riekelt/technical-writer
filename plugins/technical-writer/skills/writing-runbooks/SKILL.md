@@ -11,7 +11,7 @@ description: Use when writing operational documentation - runbooks, setup guides
 
 A runbook is read by someone in a hurry, often mid-incident. Every rule here serves that reader: order, one action per step, copy-pasteable commands, and danger marked where the eye already is.
 
-Write from a real run: every step one actually taken, every failure named one that actually happened. A procedure imagined at the desk is a draft, not a runbook.
+Write from a real run: every step one actually taken, every failure named one that actually happened. A procedure imagined at the desk is a draft, not a runbook. Partially exercised procedures publish with per-branch honesty: the runbook states which variant has not run yet and marks that branch draft, asking its first real runner to report back; a procedure with no real run behind any branch is a draft outright. When a value the commands need is genuinely unknown, the placeholder stays visibly bracketed rather than invented, and gets filled from a real run before publishing; truth outranks paste-readiness.
 
 ## When to invoke, and not
 
@@ -21,7 +21,7 @@ Invoke for anything a person will execute: runbooks, setup and release procedure
 
 - Title carries the scope: "MVP runbook (Reddit)", "Release runbook".
 - Open with what this document is relative to its siblings: "this doc is the sequence; deep detail per step lives in X." State what it does NOT cover.
-- **Legend up front** when steps differ in risk, applied to every command: safe to run anytime / operator-only (writes to production) / manual step outside the terminal.
+- **Legend up front** when steps differ in risk, applied to every command: safe to run anytime / operator-only (writes to production) / manual step outside the terminal. Tags combine where a step is more than one thing.
 - **TL;DR happy path first**, then the same steps broken out as numbered sections for when the reader needs only one.
 - Version-pinned prerequisites before any command, each with a check command to confirm it.
 - Numbered ordinal steps (not bullets), one action each, present tense or imperative, with a visible actor.

@@ -74,12 +74,12 @@ Before any document goes out:
 - [ ] **Headings name the content**: no question forms, no "What X means", no heading repeated in its first sentence
 - [ ] **Conclusion first** at document, chapter, and paragraph level
 - [ ] **Procedures**: one action per sentence, with an actor
-- [ ] **Every non-trivial choice** has its reasoning and a serious alternative recorded
-- [ ] **The costs are in**, not only the benefits
+- [ ] **Where the document proposes or decides**: every non-trivial choice has its reasoning and a serious alternative recorded, and the costs are in, not only the benefits
 - [ ] **Fact and proposal are distinguishable**; estimates labeled; unknowns explicitly unknown
 - [ ] **Every claim with a number** traces to a source named in the document
 - [ ] **References checked by following them**: chapter numbers, relative links, and file names actually exist (they break silently on every restructure)
 - [ ] **Terms consistent** and defined at first use; one term per concept
 - [ ] **Read aloud**: at least the summary; no row of fragments, no three sentences with the same opening
 - [ ] **Remove-the-name test** on the opening and summary: with the product name deleted, a stranger can still tell what the text is about
+- [ ] **Reads cold, reads whole**: natural to someone who never saw the conversation or feedback rounds that produced it; one voice throughout, no patchwork seams, no sentence explaining why the document was written this way
 - [ ] **On a rewrite**: no fact, number, date, or source added or lost
