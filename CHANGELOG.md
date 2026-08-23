@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/riekelt/technical-writer/compare/v1.6.0...v1.7.0) (2026-08-23)
+
+
+### Features
+
+* diagrams as claims, docs that survive refactors ([efebff7](https://github.com/riekelt/technical-writer/commit/efebff71b5c87623ba349cc71487986eda681f0d))
+
 # [1.6.0](https://github.com/riekelt/technical-writer/compare/v1.5.1...v1.6.0) (2026-08-22)
 
 
