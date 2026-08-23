@@ -1,6 +1,6 @@
 {
   "name": "technical-writer",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "private": true,
   "scripts": {
     "test": "node --test"

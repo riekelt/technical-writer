@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/riekelt/technical-writer/compare/v1.7.2...v1.7.3) (2026-08-23)
+
+
+### Bug Fixes
+
+* one diagram toolchain, and the reviewer catches what the author swears by ([564d29c](https://github.com/riekelt/technical-writer/commit/564d29c2f62b750a635f1152a4cca79ee6f2c45b))
+
 ## [1.7.2](https://github.com/riekelt/technical-writer/compare/v1.7.1...v1.7.2) (2026-08-23)
 
 
