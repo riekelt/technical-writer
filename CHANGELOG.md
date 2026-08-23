@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/riekelt/technical-writer/compare/v1.7.1...v1.7.2) (2026-08-23)
+
+
+### Bug Fixes
+
+* grounding reads code, it does not need the big brain ([9550e51](https://github.com/riekelt/technical-writer/commit/9550e5108cb5e16fdaa6f16b6161fc73660fa00c))
+
 ## [1.7.1](https://github.com/riekelt/technical-writer/compare/v1.7.0...v1.7.1) (2026-08-23)
 
 
