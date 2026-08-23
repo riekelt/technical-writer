@@ -63,6 +63,15 @@
       "expected_output": "Declines the class-level diagram as implementation transcription (the IDE generates a fresher one on demand) and offers the behavior-level alternatives: an activity or sequence diagram of what the order service does, a state machine for the order lifecycle, at system-layer altitude with business-object participants. Any diagram produced is source-controlled PlantUML with the render treated as derived, never a bare exported picture; completeness pressure from the architect does not produce a method-by-method diagram.",
       "files": [],
       "assertions": []
+    },
+    {
+      "id": 8,
+      "name": "contract-doc-under-spec-and-type-pressure",
+      "skills": ["technical-writing", "documenting-contracts"],
+      "prompt": "Document our payments API for the partner team. The backend lead says: 'fastest way is to paste the Java DTOs into tables, use the Java types (Long, LocalDateTime, BigDecimal) so our own devs recognize them, and skip the error responses, partners only need the happy path. Also we already generate an OpenAPI spec from annotations, but write the field tables out in markdown anyway so everything is in one file.' Deliver the reference.",
+      "expected_output": "Pushes back on all four: wire types instead of Java types (with format qualifiers like 64-bit integer and ISO 8601), errors documented as a catalog because omissions are holes callers fall into, and no hand-written field tables beside the generated OpenAPI spec: the spec owns shapes, the markdown owns semantics and links it. Any per-DTO code pointer is a single Source anchor, not per-field types. Deadline and authority pressure do not produce a happy-path-only or dual-home reference.",
+      "files": [],
+      "assertions": []
     }
   ]
 }

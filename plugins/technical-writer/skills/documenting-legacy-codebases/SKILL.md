@@ -32,7 +32,7 @@ Each count is a claim, so the count rule in `references/truth.md` in the core sk
 
 The tree describes the generic system. The code states its own implementation, and prose that re-documents the implementation competes with a better source and loses at the first refactor. Kind decides the depth:
 
-- **Contract surfaces are exhaustive.** What outside parties bind to and cannot read the code for: HTTP endpoints, message payloads, file formats, config keys. These are reference kind, so the core Reference rule applies: every endpoint, every field, every key. An omission here is a hole a caller falls into.
+- **Contract surfaces are exhaustive.** What outside parties bind to and cannot read the code for: HTTP endpoints, message payloads, commands, file formats, config keys. These are reference kind, so the core Reference rule applies: every endpoint, every field, every key. An omission here is a hole a caller falls into. `documenting-contracts` carries the template for endpoints, messages, commands, and payloads; config keys follow the core Reference rule in `config-reference.md`.
 - **Internals get the gist.** A descriptive document states the mechanism and its consequences ("the store is append-only; reads take the tip of the chain; an update replaces the whole record"). The classes, database keys, mappings, and call chains that implement the mechanism stay in the code.
 - **The refactor test.** A finished document sits still while the code is refactored, and changes when behavior changes or a feature lands. A sentence that a rename would falsify (a method name, a line number, a list of classes) is implementation detail in prose form; lift it to the behavior it implements or cut it.
 - **Prose carries no code references.** A document names the module or path it describes once, in its opening: the drift anchor the core skill's `references/truth.md` requires. Running prose stays free of paths, class names, and line numbers; exact `file:line` belongs in the findings note, where it is working material for the owner.
@@ -114,8 +114,8 @@ docs/
                        # in the opening, no code references in the prose
   config-reference.md  # every key with default, binding evidence, and Usage; dead
                        # knobs marked dead
-  api-reference.md     # every endpoint, command, and message payload: request,
-                       # response, errors; file formats the system reads or writes
+  api-reference.md     # every endpoint, command, and message payload, written
+                       # per documenting-contracts; file formats included
   integrations.md      # every external system, direction, protocol, failure behavior
   data-model.md        # what is stored, who owns it, its lifecycle, and its
                        # quirks; the migrations own the columns and keys

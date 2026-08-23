@@ -5,7 +5,8 @@
     "technical-writing": { "pass": 12, "total": 12 },
     "reviewing-technical-prose": { "pass": 12, "total": 12, "note": "rp06 (reviewing a postmortem for tone) routes stably to writing-postmortems; accepted as a correct alternate landing since its cross-references route onward. Observation: essay-review queries also land on reviewing-technical-prose because nothing in the roster owns non-technical prose; mild over-trigger, tolerated." },
     "documenting-legacy-codebases": { "pass": 7, "total": 7, "note": "Measured 2026-08-22 against a 39-entry roster (29 real skills across four plugins, 10 distractors): the four dl queries plus the three overlap-risk siblings (tw01, tw02, tw05). All four dl queries routed as intended, including the investigation phrasing and the boundary probe (fresh endpoint docs stayed on technical-writing). tw01 and tw05 kept their prior destinations. tw02 (write up how the sync pipeline works) moved to documenting-legacy-codebases; accepted as a correct alternate landing since documenting an existing system is this skill's territory and it loads the core as required background." },
-    "diagramming-processes": { "pass": 4, "total": 4, "note": "Measured 2026-08-23 against a 40-entry roster (30 real skills across four plugins, 10 distractors). All three positives (activity flow, state machine, cross-department business process) routed first try; the data-chart negative routed to a dataviz distractor, not to this skill, which is the intended boundary." }
+    "diagramming-processes": { "pass": 4, "total": 4, "note": "Measured 2026-08-23 against a 40-entry roster (30 real skills across four plugins, 10 distractors). All three positives (activity flow, state machine, cross-department business process) routed first try; the data-chart negative routed to a dataviz distractor, not to this skill, which is the intended boundary." },
+    "documenting-contracts": { "pass": 4, "total": 4, "note": "Measured 2026-08-23 against a 41-entry roster (31 real skills across four plugins, 10 distractors). All three positives routed first try, including the kafka-payload query where documenting-legacy-codebases is an accepted alternate. The design-a-new-API negative routed to writing-design-docs, the correct sibling: this skill documents contracts that exist, it does not design them." }
   },
   "queries": [
     { "id": "tw01", "should": true, "accept": ["technical-writing"], "q": "can you clean up the architecture overview in docs/architecture.md? it's gotten pretty rambly and half of it describes the old queue system we removed" },
@@ -39,6 +40,10 @@
     { "id": "dg01", "should": true, "accept": ["diagramming-processes"], "q": "can you draw how an order flows through our fulfillment process, from checkout to shipment" },
     { "id": "dg02", "should": true, "accept": ["diagramming-processes"], "q": "we need a state diagram for the subscription lifecycle, it has weird edge states" },
     { "id": "dg03", "should": true, "accept": ["diagramming-processes"], "q": "management wants a business process overview of claims handling across the departments" },
-    { "id": "dg04", "should": false, "q": "plot daily active users over the last quarter as a line chart" }
+    { "id": "dg04", "should": false, "q": "plot daily active users over the last quarter as a line chart" },
+    { "id": "dc01", "should": true, "accept": ["documenting-contracts"], "q": "write API docs for our orders service so the partner team can integrate" },
+    { "id": "dc02", "should": true, "accept": ["documenting-contracts"], "q": "the mobile team keeps asking what fields the checkout payload accepts and which are required" },
+    { "id": "dc03", "should": true, "accept": ["documenting-contracts", "documenting-legacy-codebases"], "q": "document the message bodies on our kafka topics, consumers keep guessing the schema" },
+    { "id": "dc04", "should": false, "q": "design a new REST API for the inventory service" }
   ]
 }

@@ -26,6 +26,7 @@ Load this skill for any technical prose, then the matching document-type skill o
 | A postmortem, incident report, root-cause analysis | `writing-postmortems` |
 | Documenting an existing, under-documented system; regrounding stale docs against code | `documenting-legacy-codebases` |
 | A process, lifecycle, or interaction diagram; drawing business logic | `diagramming-processes` |
+| An API reference: endpoints, message payloads, DTOs, CLI commands, file formats, webhooks | `documenting-contracts` |
 | Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
 
 ## Non-goals
