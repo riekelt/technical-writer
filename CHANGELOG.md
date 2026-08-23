@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/riekelt/technical-writer/compare/v1.7.0...v1.7.1) (2026-08-23)
+
+
+### Bug Fixes
+
+* contracts documented at four depths, in the caller's language ([123a9fd](https://github.com/riekelt/technical-writer/commit/123a9fd0ff0de38ca83b0d36ba504f8e0f4d2021))
+
 # [1.7.0](https://github.com/riekelt/technical-writer/compare/v1.6.0...v1.7.0) (2026-08-23)
 
 
