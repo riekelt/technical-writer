@@ -1,6 +1,6 @@
 ---
 name: diagramming-processes
-description: Use when a business process, workflow, lifecycle, or interaction between systems needs a diagram - a flow that prose serializes badly, a state machine, a message sequence, an enterprise process map - or when drawing the process documentation of a legacy campaign. Encodes diagrams-as-source, the notation ladder from ArchiMate to PlantUML, the kind-per-question table, behavior-level participants, the diagram index, and the same-change maintenance rule. Use whenever a document needs a graph rather than more paragraphs, even if nobody says "PlantUML" or "Mermaid".
+description: Use when a business process, workflow, lifecycle, or interaction between systems needs a diagram - a flow that prose serializes badly, a state machine, a message sequence, an enterprise process map - or when drawing the process documentation of a legacy campaign. Encodes diagrams-as-source, the notation ladder from ArchiMate to PlantUML, the kind-per-question table, behavior-level participants, the diagram index, and the same-change maintenance rule. Use whenever a document needs a graph rather than more paragraphs, even if nobody says "PlantUML".
 ---
 
 # Diagramming processes
@@ -23,14 +23,14 @@ Match the notation to the altitude, and name the altitude before drawing:
 - **System layer: PlantUML behavior diagrams.** Flows, state machines, and sequences within and between systems. This is where code documentation lives, one level above the code.
 - **Code layer: no diagrams.** Class and package structure is the code's own to show, and an IDE generates a fresher picture on demand than any committed one.
 
-The ladder sets the notation and the vocabulary; the tool follows the repository. In a code repository, one toolchain serves both rungs: PlantUML, with its ArchiMate plugin for the business layer. In a documentation repository or folder, use the diagram tool already in use there, and when none is discernible, ask the owner which they prefer.
+The ladder sets the notation and the vocabulary, never the tool: one toolchain can serve both rungs, because PlantUML carries the ArchiMate notation in its standard library. Which tool a repository uses is settled once, under "Source, not pictures" below.
 
 ## Source, not pictures
 
-- The source is committed text: PlantUML by default, Mermaid where the hosting platform renders it inline. The core skill's `references/truth.md` owns the ground rule: rendered output is derived, and stale renders are deleted rather than left to mislead.
+- The source is committed text, in the diagram tool the repository already uses. Where none is established, PlantUML is the default, chosen for its rich standard library (the ArchiMate notation included); where the choice is genuinely open, ask the owner, recommending PlantUML. The core skill's `references/truth.md` owns the ground rule: rendered output is derived, and stale renders are deleted rather than left to mislead.
 - One diagram per source file, named for the process it shows, grouped in one diagrams directory beside the documents.
-- One repo command renders everything, and the diagram index names it. Renders are committed only where the host cannot render source; when a source changes, its outdated render is deleted in the same change, and the missing render is recorded in the index until regenerated.
-- Mermaid embedded inline needs no render step; the block updates in the same change as the flow it shows.
+- Rendering requires tooling the repository owns: a script, a make target, or a build step, set up by the owner, not by the diagram's author. Tell the owner when it is missing; never route around the gap by picking whatever notation the hosting platform happens to render inline.
+- One repo command renders everything, and renders are committed unless the host already renders the repository's chosen source format. When a source changes, its outdated render is deleted in the same change, and the missing render is recorded in the index until regenerated.
 - A screenshot, an exported picture, or a whiteboard photo with no source is a finding against the document that contains it: nobody can diff it, so nobody will maintain it.
 
 ## The kind answers the reader's question
@@ -68,13 +68,13 @@ More than five diagrams get one index document beside them, and the index is a d
 
 ## Maintenance
 
-A change that alters a flow updates the matching diagram source in the same change: a diagram is documentation, and documentation is part of done (core truth rules). Rendering is also the diagram's compile step: source edits break syntax invisibly, and the break surfaces only when the render runs. The author renders, or previews inline Mermaid in the host, before shipping the edit. When a feature is removed, one change covers the prose, the diagram source, the index row, and the committed render. A diagram nobody can bring themselves to update is answering too big a question; split it along the seams that change independently.
+A change that alters a flow updates the matching diagram source in the same change: a diagram is documentation, and documentation is part of done (core truth rules). Rendering is also the diagram's compile step: source edits break syntax invisibly, and the break surfaces only when the render runs. The author renders before shipping the edit; where the repository's pipeline is still missing, a local one-off run of the tool satisfies this check. When a feature is removed, one change covers the prose, the diagram source, the index row, and the committed render. A diagram nobody can bring themselves to update is answering too big a question; split it along the seams that change independently.
 
 ## Verification
 
 Everything legible in a diagram is a claim, per the core truth rules, so a diagram is grounded and reviewed like prose:
 
-- The writer verifies every box, arrow, and guard against the code before drawing it. A flow inferred rather than confirmed is labeled as inference beside the diagram in the embedding document, never silently drawn as fact.
+- The author verifies every box, arrow, and guard against the code before drawing it. A flow inferred rather than confirmed is labeled as inference beside the diagram in the embedding document, never silently drawn as fact.
 - The reviewer reads the diagram against the behavior, and reviews the source text rather than the picture: the source is what the next editor changes.
-- Diagram sources drift like prose and join every legacy campaign: the campaign (`documenting-legacy-codebases`) grounds the `.puml` files with the documents that embed them.
+- Diagram sources drift like prose and join every legacy campaign: the campaign (`documenting-legacy-codebases`) grounds the diagram sources with the documents that embed them.
 - A diagram and its surrounding prose share one home per fact. The prose says why the process exists and what to look out for; the diagram shows the flow, and neither restates the other step by step.

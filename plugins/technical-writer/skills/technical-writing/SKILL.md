@@ -15,6 +15,8 @@ These rules govern documents, not chat replies. Length and section rules apply t
 
 Load this skill for any technical prose, then the matching document-type skill on top. These are routing hints; each skill's own body is the authority.
 
+When a repository regularly produces documents, record the invocation in project memory: one line in its CLAUDE.md or the platform's equivalent, telling agents to load this skill for any technical prose there. A skill the project names loads every session; one left to recall loads only when someone thinks of it.
+
 | The task is | Also load |
 |---|---|
 | A proposal, RFC, design doc, spec, or migration plan | `writing-design-docs` |

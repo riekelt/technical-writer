@@ -48,7 +48,7 @@ This is a named exception to the no-changelog rule, allowed because approval eve
 - Indexes are derived artifacts. Rebuild them from the leaves and verify counts against the actual files; every entry gets a one-line purpose.
 - A descriptive document names the code it describes. Put the path (a module, a directory, an entry point) in the front matter or the opening, so drift checks have an anchor. A path is not a date; this does not violate the ban on "last updated" fields.
 - When auditing documentation, count documented items against total public items (endpoints, commands, config keys) rather than judging completeness by impression.
-- Diagrams are source-controlled text (Mermaid, PlantUML) and rendered output is derived. Delete stale renders rather than letting them mislead, and note which sources await re-rendering. Everything legible in an image is a claim, subject to the same rules as prose; a picture does not look like a claim, which is exactly why it escapes review.
+- Diagrams are source-controlled text (PlantUML, for instance) and rendered output is derived. Delete stale renders rather than letting them mislead, and note which sources await re-rendering. Everything legible in an image is a claim, subject to the same rules as prose; a picture does not look like a claim, which is exactly why it escapes review.
 - Tense must match status. A dormant system cannot take the present tense; an unreleased one cannot imply availability.
 - "was refactored to", "now uses", and "replaces the old" describe an edit, not the system. Explain what the system does; keep the diff only where the history itself is the evidence (migration docs, release notes).
 
