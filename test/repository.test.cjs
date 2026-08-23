@@ -35,7 +35,7 @@ const markdownFiles = walk(root)
   .filter((file) => !file.includes(`${join(root, 'node_modules')}/`));
 
 const coreSkill = read('plugins/technical-writer/skills/technical-writing/SKILL.md');
-const styleReference = read('plugins/technical-writer/skills/technical-writing/style.md');
+const styleReference = read('plugins/technical-writer/skills/technical-writing/references/style.md');
 const changelogSkill = read('plugins/technical-writer/skills/writing-changelogs/SKILL.md');
 
 const MIT_LICENSE_SOURCE = 'https://spdx.org/licenses/MIT.txt';
@@ -66,7 +66,7 @@ function localMarkdownLinks(text) {
 }
 
 test('skill frontmatter is structurally valid', () => {
-  assert.equal(skillFiles.length, 7);
+  assert.ok(skillFiles.length >= 10, `expected at least 10 skills, found ${skillFiles.length}`);
 
   for (const file of skillFiles) {
     const text = readFileSync(file, 'utf8');
@@ -97,9 +97,13 @@ test('local Markdown links resolve', () => {
   }
 });
 
-test('metadata describes all six specialized skills', () => {
+test('metadata counts the specialized skills correctly', () => {
   const readme = read('README.md');
-  assert.match(readme, /one core skill[^.]*six specialized skills/i);
+  const specialized = skillFiles.length - 1;
+  const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+  const stated = readme.match(/one core skill[^.]*?(\w+) specialized skills/i);
+  assert.ok(stated, 'README states the specialized skill count');
+  assert.equal(stated[1].toLowerCase(), words[specialized] ?? String(specialized));
   assert.match(readme, /writing-issues\//);
 
   for (const file of descriptiveManifestFiles) {

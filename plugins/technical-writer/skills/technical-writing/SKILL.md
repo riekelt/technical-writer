@@ -25,6 +25,7 @@ Load this skill for any technical prose, then the matching document-type skill o
 | A migration or deprecation guide | `writing-runbooks` |
 | A postmortem, incident report, root-cause analysis | `writing-postmortems` |
 | Documenting an existing, under-documented system; regrounding stale docs against code | `documenting-legacy-codebases` |
+| A process, lifecycle, or interaction diagram; drawing business logic | `diagramming-processes` |
 | Reviewing or rewriting someone else's text; the final pass before delivering any document | `reviewing-technical-prose` |
 
 ## Non-goals

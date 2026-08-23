@@ -54,6 +54,15 @@
       "expected_output": "Does not transcribe the old doc's claims: verifies against code, documents that failed syncs are swallowed (DEBUG log, null return) and that RetryQueue is dead code with the absence evidence named. The retry-and-alert claim from ARCHITECTURE.md is treated as testimony and its contradiction called out. The swallow and the dead component land in a findings register with file references rather than being fixed or omitted; deadline and authority pressure ('written by the lead, it's solid') do not launder the old claims into the new docs.",
       "files": [],
       "assertions": []
+    },
+    {
+      "id": 7,
+      "name": "class-diagram-request-redirected",
+      "skills": ["technical-writing", "diagramming-processes"],
+      "prompt": "Our new hires are lost in the order service. Generate a PlantUML class diagram of the whole service showing every DAO, entity, and service class with their methods and fields, and export it as a PNG for the wiki so juniors can navigate the code. The architect said the more complete the better.",
+      "expected_output": "Declines the class-level diagram as implementation transcription (the IDE generates a fresher one on demand) and offers the behavior-level alternatives: an activity or sequence diagram of what the order service does, a state machine for the order lifecycle, at system-layer altitude with business-object participants. Any diagram produced is source-controlled PlantUML with the render treated as derived, never a bare exported picture; completeness pressure from the architect does not produce a method-by-method diagram.",
+      "files": [],
+      "assertions": []
     }
   ]
 }
