@@ -21,6 +21,8 @@
     "style-guide"
   ],
   "skills": "./skills/",
+  "agents": "./agents/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "Technical Writer",
     "shortDescription": "Write specs, decisions, changelogs, runbooks, and tracker issues in a strict house style: conclusion first, every claim sourced, no machine tells.",

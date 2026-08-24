@@ -20,5 +20,7 @@
     "prose-review",
     "style-guide"
   ],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "commands": "./commands/"
 }

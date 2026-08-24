@@ -47,6 +47,17 @@ No prior art turned up for these parts when I searched public agent skills, styl
 - the rewrite rule that an added fact counts as an error like a lost one
 - the remove-the-name test
 
+## Agents and commands
+
+Beyond the skills, the plugin ships two subagent definitions and two commands (Claude Code; other platforms load what they support):
+
+| Component | What it does |
+|---|---|
+| `prose-reviewer` agent | The fresh-eyes review protocol as an agent type: digest-bound, cross-references followed, findings in the severity grammar, never edits. |
+| `doc-grounder` agent | Read-only grounding of one document against the code at HEAD, under the legacy-campaign doctrine. |
+| `/prose-review [file ...]` | Runs a digest-bound `prose-reviewer` per file and relays the verdicts. |
+| `/ground-docs [path]` | Launches the legacy documentation campaign: survey, plan for approval, fan-out, ledger. |
+
 ## Install
 
 Claude Code:
@@ -70,6 +81,8 @@ plugins/technical-writer/
   .codex-plugin/plugin.json              # Codex plugin manifest
   .cursor-plugin/plugin.json             # Cursor plugin manifest
   evals/                                 # skill trigger and behavior evals
+  agents/                                # prose-reviewer, doc-grounder subagent definitions
+  commands/                              # /prose-review, /ground-docs entry points
   skills/
     technical-writing/                   # core: SKILL.md, references/style.md, references/truth.md
     writing-design-docs/
