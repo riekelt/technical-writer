@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/riekelt/technical-writer/compare/v1.7.3...v1.8.0) (2026-08-24)
+
+
+### Features
+
+* the review protocol stops being folklore ([8687e0c](https://github.com/riekelt/technical-writer/commit/8687e0c8665abb1fcf6c6652e574fde1d5eb8c61))
+
 ## [1.7.3](https://github.com/riekelt/technical-writer/compare/v1.7.2...v1.7.3) (2026-08-23)
 
 
