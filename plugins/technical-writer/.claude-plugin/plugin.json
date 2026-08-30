@@ -21,6 +21,6 @@
     "style-guide"
   ],
   "skills": "./skills/",
-  "agents": "./agents/",
+  "agents": ["./agents/doc-grounder.md", "./agents/prose-reviewer.md"],
   "commands": "./commands/"
 }
