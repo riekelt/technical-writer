@@ -21,8 +21,6 @@
     "style-guide"
   ],
   "skills": "./skills/",
-  "agents": "./agents/",
-  "commands": "./commands/",
   "interface": {
     "displayName": "Technical Writer",
     "shortDescription": "Write specs, decisions, changelogs, runbooks, and tracker issues in a strict house style: conclusion first, every claim sourced, no machine tells.",
@@ -40,9 +38,6 @@
     "websiteURL": "https://github.com/riekelt/technical-writer",
     "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
-    "brandColor": "#0F766E",
-    "composerIcon": "",
-    "logo": "",
-    "screenshots": []
+    "brandColor": "#0F766E"
   }
 }
