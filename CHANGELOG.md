@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/riekelt/technical-writer/compare/v1.8.1...v1.8.2) (2026-08-30)
+
+
+### Bug Fixes
+
+* codex manifest carries only fields codex supports ([77ba3af](https://github.com/riekelt/technical-writer/commit/77ba3af1b832ca7d9053284f40c3fcc0afa0c7a9))
+
 ## [1.8.1](https://github.com/riekelt/technical-writer/compare/v1.8.0...v1.8.1) (2026-08-30)
 
 
