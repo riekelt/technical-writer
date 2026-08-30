@@ -1,7 +1,7 @@
 {
   "name": "technical-writer",
   "description": "House-style technical writing: a core style and truth skill plus specialized skills for design docs, decisions, changelogs, runbooks, tracker issues, and prose review",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "author": {
     "name": "riekelt",
     "email": "r@kapitein.nl",
@@ -21,6 +21,9 @@
     "style-guide"
   ],
   "skills": "./skills/",
-  "agents": ["./agents/doc-grounder.md", "./agents/prose-reviewer.md"],
+  "agents": [
+    "./agents/doc-grounder.md",
+    "./agents/prose-reviewer.md"
+  ],
   "commands": "./commands/"
 }

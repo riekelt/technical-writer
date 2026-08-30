@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/riekelt/technical-writer/compare/v1.8.0...v1.8.1) (2026-08-30)
+
+
+### Bug Fixes
+
+* agents manifest field must be an array of file paths ([a0a7161](https://github.com/riekelt/technical-writer/commit/a0a71612a38ce615f7f731b9bdddfcd9e508a620))
+
 # [1.8.0](https://github.com/riekelt/technical-writer/compare/v1.7.3...v1.8.0) (2026-08-24)
 
 
