@@ -1,3 +1,11 @@
+## [1.8.3](https://github.com/riekelt/technical-writer/compare/v1.8.2...v1.8.3) (2026-09-11)
+
+
+### Bug Fixes
+
+* every rule survives, the rationale around it gets shorter ([d3cb24f](https://github.com/riekelt/technical-writer/commit/d3cb24f3598a0d486023ad3785d9d3418675071d))
+* manifests describe the ten skills that ship ([9852ea3](https://github.com/riekelt/technical-writer/commit/9852ea39db7e8669de04d974eb849790e03ce0f6))
+
 ## [1.8.2](https://github.com/riekelt/technical-writer/compare/v1.8.1...v1.8.2) (2026-08-30)
 
 
