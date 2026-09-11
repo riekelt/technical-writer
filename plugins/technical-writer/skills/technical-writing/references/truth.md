@@ -1,7 +1,5 @@
 # Truth: claims, sourcing, and staleness
 
-The rules that keep a document true, and true tomorrow.
-
 ## Grounding claims
 
 - Every load-bearing claim traces to a source stated in the document: a `file:line`, a pinned commit, a test, an exact query, or a primary source. If a claim is not backed, say so in the document; "I read this from empty files" is a stronger sentence than a confident guess.
@@ -12,7 +10,7 @@ The rules that keep a document true, and true tomorrow.
 - Prefer primary sources. When official sources conflict, document the conflict and state which source wins and why; never silently pick the favorable value.
 - Unknowns stay explicitly unknown: "not stated by the vendor" means no public statement was found, not that the thing is absent. Define the placeholder's meaning for the reader.
 - Third-party behavior is perishable: any vendor, model, API, or library claim carries the date and commit at which it was observed. Prices, versions, and limits are always dated, never stated as permanent.
-- Date a claim once, next to the claim, instead of sprinkling freshness copy through the document.
+- Date a claim once, next to the claim, not as freshness copy sprinkled through the document.
 
 ## Confidence labels
 
@@ -28,7 +26,7 @@ Never claim a state you have not verified. Distinguish three states: written (ex
 
 - Analysis is factual and verifiable; phasing and recommendations are not. Say explicitly which part is which.
 - Keep hypotheses labeled as hypotheses until repeated evidence supports them; keep the interpretation in a separate column or sentence so it cannot become evidence by repetition.
-- Carry known weaknesses forward instead of quietly dropping them. A deliberate limitation has a known cost; state that cost rather than let a reader discover it later.
+- Carry known weaknesses forward instead of quietly dropping them. A deliberate limitation has a known cost; state that cost.
 - In a document that circulates, name the role or the process failure, never the person.
 
 ## Reviewed documents
@@ -43,12 +41,12 @@ This is a named exception to the no-changelog rule, allowed because approval eve
 - When a fact changes, sweep every surface that states it. Enumerate the affected pages, fix them all, and scope the sweep precisely so it does not become a rewrite.
 - Correct visibly. Say what you corrected rather than quietly rewriting it. Delete only what is wrong; age alone is not a reason.
 - Superseded documents get a banner, not deletion: what superseded it, where authority moved, and why the file still exists. A decommissioned document becomes a pointer ("the backlog now lives in X; do not re-add items here") with a note where the old content went.
-- A document that names its own stale regions is more trustworthy than one that is merely current. Surface staleness as a visible note instead of leaving a wrong picture in place.
+- Surface staleness as a visible note instead of leaving a wrong picture in place.
 - Retired false claims get a regression check (a grep in CI or a checklist line) so they cannot silently come back.
 - Indexes are derived artifacts. Rebuild them from the leaves and verify counts against the actual files; every entry gets a one-line purpose.
 - A descriptive document names the code it describes. Put the path (a module, a directory, an entry point) in the front matter or the opening, so drift checks have an anchor. A path is not a date; this does not violate the ban on "last updated" fields.
 - When auditing documentation, count documented items against total public items (endpoints, commands, config keys) rather than judging completeness by impression.
-- Diagrams are source-controlled text (PlantUML, for instance) and rendered output is derived. Delete stale renders rather than letting them mislead, and note which sources await re-rendering. Everything legible in an image is a claim, subject to the same rules as prose; a picture does not look like a claim, which is exactly why it escapes review.
+- Diagrams are source-controlled text (PlantUML, for instance) and rendered output is derived. Delete stale renders rather than letting them mislead, and note which sources await re-rendering. Everything legible in an image is a claim, subject to the same rules as prose.
 - Tense must match status. A dormant system cannot take the present tense; an unreleased one cannot imply availability.
 - "was refactored to", "now uses", and "replaces the old" describe an edit, not the system. Explain what the system does; keep the diff only where the history itself is the evidence (migration docs, release notes).
 
@@ -56,7 +54,7 @@ This is a named exception to the no-changelog rule, allowed because approval eve
 
 When a conventions document accumulates its own rules:
 
-- A new rule records the incident that created it (trigger, instruction, added-after, example). Rules without provenance get cargo-culted or wrongly deleted.
+- A new rule records the incident that created it (trigger, instruction, added-after, example).
 - Add a rule when the same mistake happens twice; once is learning.
 - Refine a rule that keeps triggering (sharper trigger, clearer instruction, an example); retire a rule whose underlying cause is fixed. "Be careful" is not a rule.
 - Exceptions live next to the rule they bend, not only in the artifact that needed them.

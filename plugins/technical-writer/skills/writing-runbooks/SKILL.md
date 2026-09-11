@@ -9,9 +9,9 @@ description: Use when writing operational documentation - runbooks, setup guides
 
 ## Overview
 
-A runbook is read by someone in a hurry, often mid-incident. Every rule here serves that reader: order, one action per step, copy-pasteable commands, and danger marked where the eye already is.
+The reader is in a hurry, often mid-incident. Every runbook is ordered, one action per step, copy-pasteable, with danger marked where the eye already is.
 
-Write from a real run: every step one actually taken, every failure named one that actually happened. A procedure imagined at the desk is a draft, not a runbook. Publish a partially exercised procedure with per-branch honesty: the runbook names the variant that has not run yet, marks that branch draft, and asks its first real runner to report back. A procedure with no real run behind any branch is a draft outright. When a value the commands need is genuinely unknown, the placeholder stays visibly bracketed rather than invented, and gets filled from a real run before publishing; truth outranks paste-readiness.
+Write from a real run: every step one actually taken, every failure named one that actually happened. A procedure imagined at the desk is a draft, not a runbook. A partially exercised procedure may be published with per-branch honesty: name the variant that has not run yet, mark that branch draft, and ask its first real runner to report back. A procedure with no real run behind any branch is a draft outright. When a value the commands need is genuinely unknown, keep the placeholder visibly bracketed, never invented, and fill it from a real run before publishing; truth outranks paste-readiness.
 
 ## When to invoke, and not
 
@@ -20,10 +20,10 @@ Invoke for anything a person will execute: runbooks, setup and release procedure
 ## Structure
 
 - Title carries the scope: "MVP runbook (Reddit)", "Release runbook".
-- Open with what this document is relative to its siblings: "this doc is the sequence; deep detail per step lives in X." State what it does NOT cover.
+- Open with what this document is relative to its siblings ("this doc is the sequence; deep detail per step lives in X") and state what it does NOT cover.
 - **Legend up front** when steps differ in risk, applied to every command: safe to run anytime / operator-only (writes to production) / manual step outside the terminal. Tags combine where a step is more than one thing.
-- **TL;DR happy path first**, then the same steps broken out as numbered sections for when the reader needs only one.
-- Version-pinned prerequisites before any command, each with a check command to confirm it.
+- **TL;DR happy path first**, then the same steps as numbered sections for the reader who needs only one.
+- Version-pinned prerequisites before any command, each with a check command.
 - Numbered ordinal steps (not bullets), one action each, present tense or imperative, with a visible actor.
 - Every command copy-pasteable as-is, with concrete example values ("common paths: `/public_html/`, `/www/`"). Label variants inside the code block:
 
@@ -43,7 +43,7 @@ app sync run --live --approval-token=...
 
 ## Troubleshooting entries
 
-Symptom-first, because the reader arrives with an error message and no vocabulary:
+Symptom-first:
 
 ```markdown
 ## <symptom as the user sees it>
@@ -56,13 +56,13 @@ Order diagnostic steps cheapest first. Group entries by failure class. Cross-lin
 
 ## Migration and deprecation guides
 
-A migration guide is a runbook whose subject is the change itself. Everything above applies, plus five rules of its own. Each surrounding document has its own skill: the argument for the migration is a design doc (`writing-design-docs`), the decision to deprecate is an ADR (`recording-decisions`), the announcement is a changelog entry (`writing-changelogs`). This section covers the guide the reader executes.
+A migration guide is a runbook whose subject is the change itself: everything above applies, plus five rules of its own. The argument for the migration is a design doc (`writing-design-docs`), the decision to deprecate is an ADR (`recording-decisions`), the announcement is a changelog entry (`writing-changelogs`); this section covers only the guide the reader executes.
 
 1. **History is the content here, stated positively.** The before/after comparison is the job, not a violation: this is the document class the no-history hard rule explicitly carves out. Write "the tag now replaces the manual version bump" freely; that sentence is banned everywhere else and load-bearing here.
-2. **The mapping table is the core artifact.** Readers arrive knowing the old world; give them old → new per behavior, config key, command, or API, one row each. Prose explains the rows that need it; the table carries the migration.
-3. **Rollback is mandatory, per step.** Every step names its undo, or states plainly that it is irreversible and what that means for the ordering around it. A migration guide without rollback paths is a proposal to strand people mid-migration.
+2. **The mapping table is the core artifact.** Old to new per behavior, config key, command, or API, one row each. Prose explains the rows that need it; the table carries the migration.
+3. **Rollback is mandatory, per step.** Every step names its undo, or states plainly that it is irreversible and what that means for the ordering around it.
 4. **The deprecation contract carries dates.** What stops working, on which date, what happens to stragglers, and where the escape hatch is until then. "Will be removed in a future release" names no date and is banned here.
-5. **Born with an expiry.** A migration guide is temporary by design: when the migration completes, the owner reclassifies it as historical and adds the superseded banner pointing at the current-state documentation, never deleting it silently. State the completion condition in the guide itself.
+5. **Born with an expiry.** When the migration completes, the owner reclassifies the guide as historical and adds the superseded banner pointing at the current-state documentation, never deleting it silently. State the completion condition in the guide itself.
 
 ## Operator-facing strings
 

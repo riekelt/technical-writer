@@ -7,7 +7,7 @@ description: Use when writing, restructuring, or revising any technical document
 
 ## Overview
 
-House style for technical documents, composed from conventions used across my repositories. The rules themselves are in English; documents keep their own language: a Dutch document is written and reviewed in Dutch. The structural and truth rules apply in any language; the vocabulary lists in `references/style.md` are English-specific and other languages carry their own. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one, because the author is the one saying it out loud.
+House style for technical documents. The rules are in English; documents keep their own language: a Dutch document is written and reviewed in Dutch. The structural and truth rules apply in any language; the vocabulary lists in `references/style.md` are English-specific and other languages carry their own. Core principle: **a document states current, verified behavior, conclusion first, with every claim traceable to a source, and every fact living in exactly one place.** A thin document beats an overstated one.
 
 These rules govern documents, not chat replies. Length and section rules apply to running prose, not to reference lists like this file.
 
@@ -15,7 +15,7 @@ These rules govern documents, not chat replies. Length and section rules apply t
 
 Load this skill for any technical prose, then the matching document-type skill on top. These are routing hints; each skill's own body is the authority.
 
-When a repository regularly produces documents, record the invocation in project memory: one line in its CLAUDE.md or the platform's equivalent, telling agents to load this skill for any technical prose there. A skill the project names loads every session; one left to recall loads only when someone thinks of it.
+When a repository regularly produces documents, record the invocation in project memory: one line in its CLAUDE.md or the platform's equivalent, telling agents to load this skill for any technical prose there.
 
 | The task is | Also load |
 |---|---|
@@ -33,10 +33,10 @@ When a repository regularly produces documents, record the invocation in project
 
 ## Non-goals
 
-- It does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `references/truth.md` still bind those.
-- It does not decide content: what is true comes from the sources, not from the style.
-- It does not license restyling existing documents that follow their own conventions; apply the precedence rules below.
-- It does not yield to a request to make a document "punchy", "compelling", or "persuasive": the numbers persuade, the register stays plain.
+- Does not govern marketing copy, social posts, or UI microcopy; only the truth rules in `references/truth.md` still bind those.
+- Does not decide content: what is true comes from the sources, not from the style.
+- Does not license restyling existing documents that follow their own conventions; apply the precedence rules below.
+- Does not yield to a request to make a document "punchy", "compelling", or "persuasive": the numbers persuade, the register stays plain.
 
 ## Mandatory checkpoint before drafting
 
@@ -44,13 +44,13 @@ Before drafting a new document or substantial section, derive and state in worki
 
 `Kind: <normative|descriptive|historical|runbook|reference> | Audience: <who> | Purpose: <the verb the reader must accomplish> | Non-goals: <what this deliberately does not cover>`
 
-Fill the fields from the request, sources, and repository context. State a safe assumption and continue when it does not materially change the result. Ask only when an unknown would change the audience, substance, or scope. Never invent a fact to complete the checkpoint, and do not insert the checkpoint into the finished document unless its schema requires it.
+Fill the fields from the request, sources, and repository context. State a safe assumption and continue when it does not materially change the result. Ask only when an unknown would change the audience, substance, or scope. Never invent a fact to complete the checkpoint; do not insert the checkpoint into the finished document unless its schema requires it.
 
 ## Read first, then write
 
 Before writing a line:
 
-1. Read up to two comparable documents in the same directory. Adopt their structure, tone, and conventions. When fewer than two comparable documents exist, read every available example and then use repository-level conventions. Do not block because the directory is new.
+1. Read up to two comparable documents in the same directory; adopt their structure, tone, and conventions. When fewer than two comparable documents exist, read every available example, then use repository-level conventions. Do not block because the directory is new.
 2. Check for a `README.md` that indexes the documents. If it exists, add the new document to it.
 3. Check whether the topic already lives somewhere. Extending the owner is almost always better than starting a rival document beside it.
 
@@ -87,7 +87,7 @@ If an entire document describes something deleted, do not delete the file: mark 
 Non-negotiable, in every document:
 
 - **No em dashes, no en dashes, no ` -- ` dashes.** Use commas, colons, semicolons, periods, parentheses, or ` - ` with spaces as an aside marker. A plain hyphen serves ranges (`2026-2030`). Check all three forms before delivery.
-- **No changelog section and no "last updated" field inside a document.** Git history is the history. This holds per sentence too: describe current behavior, never the previous behavior ("this step replaced the manual check" belongs in a migration doc or release note, not in a procedure).
+- **No changelog section and no "last updated" field inside a document.** This holds per sentence too: describe current behavior, never the previous behavior; "this step replaced the manual check" belongs in a migration doc or release note, not in a procedure.
 - **No delivery history as narrative status in prose, comments, names, or strings**: no phases, task IDs, ticket keys, SHAs, or plan references that merely describe how work was delivered. A pinned commit may appear solely as claim evidence. Ticket keys may appear as functional metadata in tracker records, commit messages, planning documents, and citations; never in code comments or user-facing content.
 - **Never state as fact what you cannot trace** to code at a cited path, a pinned commit, a test, a document, or a primary source. A plausible guess presented as fact is worse than "the source says nothing about this." See `references/truth.md`.
 - **One fact, one home.** Everything else links to the owner. A summary may route, never decide: when an index and its source disagree, the source wins and the index is the bug.
@@ -105,7 +105,7 @@ Non-negotiable, in every document:
 
 ## Audience
 
-The same subject needs a different cut per reader. Know who you write for before starting. Not "users": the actual person, where they are, and the verb they must accomplish.
+Know who you write for before starting. Not "users": the actual person, where they are, and the verb they must accomplish.
 
 | Reader | What they need |
 |---|---|
@@ -114,7 +114,7 @@ The same subject needs a different cut per reader. Know who you write for before
 | Management / product owner | What it yields, what it costs, which risks |
 | External parties | No internal team names or jargon without explanation |
 
-Writing for several groups at once: the summary reads for the broadest group, the rest may deepen. If a phrase would need a footnote, it needs rewriting rather than a footnote.
+Several groups at once: the summary reads for the broadest group, the rest may deepen. A phrase that would need a footnote needs rewriting, not a footnote.
 
 ## Common mistakes
 
@@ -125,4 +125,4 @@ Writing for several groups at once: the summary reads for the broadest group, th
 - Vague owners: "this still needs investigation" without a name or role.
 - Listing only benefits. Every proposal names its costs.
 - Silently trimming, reordering for emphasis, or restyling a host document during an edit pass. Edits are surgical: preserve voice, structure, numbering, and IDs.
-- A document that grows past roughly 800 lines of prose while nobody looks: split it and let the main document link to the parts.
+- A document past roughly 800 lines of prose: split it and let the main document link to the parts.

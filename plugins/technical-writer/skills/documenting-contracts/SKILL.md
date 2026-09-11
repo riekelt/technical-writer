@@ -9,7 +9,7 @@ description: Use when documenting an HTTP API, message payloads, queue contracts
 
 ## Overview
 
-A contract document is read by a stranger who cannot see the code and is about to depend on it. Core principle: **document the wire, exhaustively, with each detail at its own level; the caller's language is the wire format and domain terms, never the implementation's types.** Contract surfaces are reference kind, so the core Reference rule applies: every endpoint, every field, every error. An omission here is a hole a caller falls into.
+A contract document is read by a stranger who cannot see the code and is about to depend on it. Core principle: **document the wire, exhaustively, with each detail at its own level; the caller's language is the wire format and domain terms, never the implementation's types.** Contract surfaces are reference kind, so the core Reference rule applies: every endpoint, every field, every error.
 
 ## When to invoke, and not
 
@@ -17,11 +17,11 @@ Invoke when documenting anything machines call or parse: REST and RPC endpoints,
 
 ## One home versus generated specs
 
-When an OpenAPI or AsyncAPI spec exists, or the code generates one, that spec owns the field tables. The markdown then documents only what the spec cannot say (semantics, side effects, ordering, omitted-versus-null) and links the spec; hand-maintaining field tables beside a generated one builds a second home that drifts. The catalog below is for the common legacy case where no machine spec exists, and writing one is not this document's job.
+When an OpenAPI or AsyncAPI spec exists, or the code generates one, that spec owns the field tables. The markdown then documents only what the spec cannot say (semantics, side effects, ordering, omitted-versus-null) and links the spec; never hand-maintain field tables beside a generated one; a second home drifts. The catalog below is for the case where no machine spec exists; writing one is not this document's job.
 
 ## The four detail levels
 
-Most bad contract documents mix these; this template gives each level its own home, and the writer moves detail found at the wrong level into the level that owns it:
+Each level has its own home; the writer moves detail found at the wrong level into the level that owns it:
 
 | Level | The caller asks | Home |
 |---|---|---|
@@ -34,10 +34,10 @@ Repetition across levels is the defect to hunt: an endpoint section restating it
 
 ## The DTO catalog
 
-A DTO is defined once and referenced everywhere, because the same shape travels multiple endpoints and often multiple transports:
+A DTO is defined once and referenced everywhere:
 
 - **Wire types, not language types.** `string (date, ISO 8601)`, `number (64-bit integer)`, `string (decimal)`: the column says what crosses the wire, complete enough that no reader needs the implementation's type as a proxy. A 64-bit integer that exceeds the range or precision of a consumer's native number type is wire information; the type name that produced it is not.
-- **One Source line per DTO**, naming the owning class or schema file. Reference kind sanctions this evidence anchor, the same way a config reference carries binding evidence; it is the maintainer's one-click path and the drift check's hook.
+- **One Source line per DTO**, naming the owning class or schema file. Reference kind sanctions this evidence anchor, as a config reference carries binding evidence.
 - **Required is a tri-state**: `yes`, `no`, or `if <condition>` with the condition stated.
 - **Omitted versus null is stated wherever it matters**, and always on a DTO used in a replace-style write, where an omitted field is absent from the result. Where the server assumes a value on omission instead, that value goes in the Default column.
 - **Enums get their own table**, values with meanings; nested objects link to their own catalog entry, never a second inline copy.
@@ -97,7 +97,7 @@ Source: `api/ThingRequest`
 ## Rules
 
 - **Verify against the serializer, not the class.** The wire is what the configured serializer emits and accepts: a global trimmer, a null-omitting mapper, or a custom date format changes the contract without touching any DTO. Read the serialization configuration before writing a single field row.
-- **Asymmetries are semantics.** The mutation that publishes an event on one transport and nothing on the other, or the endpoint that skips a step its siblings perform, is documented at the semantics level. That is where the surprised caller will look.
+- **Asymmetries are semantics.** The mutation that publishes an event on one transport and nothing on the other, or the endpoint that skips a step its siblings perform, is documented at the semantics level.
 - **Examples are illustrative, never normative.** One per DTO at most, labeled so, and containing no field the table lacks; the table is the contract.
 - **Errors are cataloged once**, as envelope plus a status table; an endpoint lists only which entries apply to it. Command failures are cataloged the same way, by exit code.
 - **The exhaustiveness is checkable.** The endpoint count and the DTO count are denominators like any other (core truth rules): a legacy campaign records them in its coverage ledger with the commands behind them and the date.

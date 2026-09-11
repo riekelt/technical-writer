@@ -9,7 +9,7 @@ description: Use when writing a changelog entry, release notes, or a "what shipp
 
 ## Overview
 
-The changelog is one of the few document types where the change, not the current state, is the subject; migration docs and release notes are the others. It is historical: entries are never rewritten, only appended.
+The changelog's subject is the change, not the current state; migration docs and release notes are the other document types with that subject. It is historical: entries are never rewritten, only appended.
 
 ## When to invoke, and not
 
@@ -19,11 +19,11 @@ Invoke after shipping a meaningful change (a feature, a fix of real size, a remo
 
 - One entry per shipped change, newest first, ISO dates, grouped by version where versions exist.
 - Standard categories where the file uses them: Added / Changed / Deprecated / Fixed / Removed / Security. A Deprecated entry carries the removal date and the replacement.
-- **Breaking changes lead the entry**, above the categories, each with the required migration action stated (and the migration guide linked when one exists). A breaking change buried under Added is the entry the reader needed most and found last.
+- **Breaking changes lead the entry**, above the categories, each with the required migration action stated (and the migration guide linked when one exists).
 - User-visible impact over implementation detail.
 - Present tense, active voice, and no jargon the reader would not know.
 - Group related changes, and never duplicate an existing entry.
-- Record removals, not just additions: readers chase dead concepts otherwise.
+- Record removals, not just additions.
 - Release notes are the audience-facing cut of the same facts: what changed, who it affects, what to do about it. The changelog speaks to engineers; release notes to users of the system. Both draw on the same sources and must never contradict each other.
 
 ## Entry shape
@@ -39,7 +39,7 @@ Invoke after shipping a meaningful change (a feature, a fix of real size, a remo
   branch.
 ```
 
-Fixed entries explain the failure mode, not the diff. The bold lead carries the user impact, which is what lets a reader triage a change list.
+Fixed entries explain the failure mode, not the diff. The bold lead carries the user impact, which lets a reader triage a change list.
 
 ## Honesty conventions
 
@@ -62,5 +62,3 @@ For handing finished work to a reviewer or operator, cover these sections in ord
 5. Honest caveats and things I got wrong
 6. Residual risks and what NOT to do
 7. State and what is owed (merged-not-pushed, migrations, ordered steps with the consequence of wrong ordering)
-
-Naming a section for self-reported error makes it socially safe to write.

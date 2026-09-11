@@ -11,7 +11,7 @@ description: Use when reviewing, rewriting, or editing someone else's technical 
 
 Editing is diagnosis. Every edit names the concrete defect it fixes; the smallest edit that fixes it wins. Rewriting natural or approved language without a named defect is itself a defect.
 
-Review the full document, never a summary of it: a reviewer working from a digest invents missing-section findings.
+Review the full document, never a summary of it.
 
 ## When to invoke, and not
 
@@ -34,7 +34,7 @@ One requirement above all rules: **the content stays identical.** Work in this o
    - Did the rewrite add or drop a fact, number, date, name, source, or claim?
    - Does the rewrite recreate a removed pattern in a new rhetorical form?
 
-   Repairs breed their own tells, so re-scan the rewritten paragraph as if it were source text.
+   Re-scan the rewritten paragraph as if it were source text.
 
 4. Repair what the control questions surface. An addition and a loss both count as errors, even when the text reads better for it.
 
@@ -47,10 +47,10 @@ When the source text asserts nothing recoverable (setups, glosses, meaning-sente
 
 ## Findings to leave alone
 
-The banned-constructions list helps recognize machine text; it proves nothing by itself, and every pattern also occurs in good human writing. Flag only when several signs coincide in the same paragraph.
+The banned-constructions list proves nothing by itself; every pattern also occurs in good human writing. Flag only when several signs coincide in the same paragraph.
 
-- Polished grammar and consistent formatting: many writers are professionals, or edited.
-- One repeated sentence opening: repetition can be rhythm. Fix only when it adds nothing.
+- Polished grammar and consistent formatting.
+- One repeated sentence opening: fix only when the repetition adds nothing.
 - One short sentence for emphasis: only a row of fragments is a problem.
 - Formal words in general: the list names specific words; not every formal word needs simplifying.
 - A factual contrast: "the pipeline sets the tag, the developer does not" is a statement, not antithesis.
@@ -66,10 +66,10 @@ The banned-constructions list helps recognize machine text; it proves nothing by
 - Verdict in the first line, findings ordered most severe first.
 - Severity vocabulary defined in the report that uses it: **BLOCKER** (cannot proceed), **WARNING** (likely rework; fix but not blocking), **OBS** (worth noting).
 - Every finding: one sentence stating the defect, a location (`file:line`, section, task ID), a proposed fix, and a confidence level.
-- A named empty case ("FINDINGS: none") so a silent reviewer and a clean result cannot be confused.
-- A document claim contradicted by the code is a defect in the document; report it with the conflicting source. An unrelated bug you noticed in passing is not your finding.
+- A named empty case ("FINDINGS: none").
+- A document claim contradicted by the code is a defect in the document; report it with the conflicting source. An unrelated bug noticed in passing is not your finding.
 - Re-reviews list only what remains.
-- Acknowledge what is good; a review that only objects is not calibrated.
+- Acknowledge what is good.
 
 ## Delivery checklist
 
@@ -84,7 +84,7 @@ Before any document goes out:
 - [ ] **Where the document proposes or decides**: every non-trivial choice has its reasoning and a serious alternative recorded, and the costs are in, not only the benefits
 - [ ] **Fact and proposal are distinguishable**; estimates labeled; unknowns explicitly unknown
 - [ ] **Every claim with a number** traces to a source named in the document
-- [ ] **References checked by following them**: chapter numbers, relative links, and file names actually exist (they break silently on every restructure)
+- [ ] **References checked by following them**: chapter numbers, relative links, and file names actually exist
 - [ ] **Terms consistent** and defined at first use; one term per concept
 - [ ] **Read aloud**: at least the summary; no row of fragments, no three sentences with the same opening
 - [ ] **Remove-the-name test** on the opening and summary: with the product name deleted, a stranger can still tell what the text is about
