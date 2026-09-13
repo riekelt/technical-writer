@@ -1,6 +1,6 @@
 {
   "name": "technical-writer",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "description": "House-style technical writing: a core style and truth skill plus specialized skills for design docs, decisions, changelogs, runbooks, tracker issues, postmortems, process diagrams, API and message contracts, legacy codebases, and prose review",
   "author": {
     "name": "riekelt",

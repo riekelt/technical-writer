@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/riekelt/technical-writer/compare/v1.8.3...v1.8.4) (2026-09-13)
+
+
+### Bug Fixes
+
+* the staccato rule says what a sentence may carry ([1b02048](https://github.com/riekelt/technical-writer/commit/1b020484c27c781905360e48a71ef4a93e339a69))
+
 ## [1.8.3](https://github.com/riekelt/technical-writer/compare/v1.8.2...v1.8.3) (2026-09-11)
 
 
