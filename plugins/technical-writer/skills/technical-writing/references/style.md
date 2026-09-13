@@ -7,7 +7,7 @@ These rules bind running prose in technical documents. They do not bind quoted m
 - One claim per sentence. Average around 20 words, hard maximum 35. In procedures: one action per sentence, present tense or imperative, with a visible actor. No semicolon chains of actions.
 - Active voice with a named actor: "the pipeline sets the tag", not "the tag is set". An obligation names its owner: "the team confirms this before phase 1", not "that must be confirmed".
 - Give agency to the thing that acted. A framework does not "want", a diagram does not "prove", an architecture does not "decide" unless the implementation literally performs that action. Name the code, test, or person that did it.
-- Vary sentence length. Three or more short fragments in a row read as staccato: merge them.
+- Vary sentence length. Three or more short sentences in a row read as staccato: merge them. When a claim carries a condition, cause, exception, or consequence, keep it in the sentence with the claim rather than stating it as a separate short sentence. The average and the hard maximum still bind, and a second claim still gets its own sentence.
 - Do not open three consecutive sentences with the same subject. Merge, switch subject, or lead with the action. One repetition is fine; the pattern is the problem.
 - Keep articles. "The context window", never "Context window": dropped articles read as headline voice.
 - No noun stacks over three words. "Agent retry budget config" is unreadable.
